@@ -14,25 +14,27 @@ JSON.parse(
 ) || defaultData;
 
 function saveData() {
+
     localStorage.setItem(
         STORAGE_KEY,
         JSON.stringify(progress)
     );
+
 }
 
 function renderDashboard() {
 
     document.getElementById("dayCounter").innerText =
-        `DAY ${progress.currentDay} / ${STUDY_CONFIG.totalDays}`;
+    `DAY ${progress.currentDay} / ${STUDY_CONFIG.totalDays}`;
 
     document.getElementById("grammarProgress").innerText =
-        progress.grammar + "%";
+    progress.grammar + "%";
 
     document.getElementById("vocabProgress").innerText =
-        progress.vocab + "%";
+    progress.vocab + "%";
 
     document.getElementById("kanjiProgress").innerText =
-        progress.kanji + "%";
+    progress.kanji + "%";
 
     let level = "JLPT N5 준비중";
 
@@ -49,7 +51,35 @@ function renderDashboard() {
     }
 
     document.getElementById("jlptLevel").innerText =
-        level;
+    level;
+
+}
+
+function renderGrammar(){
+
+    const target =
+    document.getElementById("grammarCard");
+
+    target.innerHTML =
+    GRAMMAR_DATA.map(item => `
+
+    <div class="grammar-item">
+
+        <h3>${item.title}</h3>
+
+        <p><strong>뜻</strong></p>
+        <p>${item.meaning}</p>
+
+        <p><strong>예문</strong></p>
+        <p>${item.example}</p>
+
+        <p><strong>해석</strong></p>
+        <p>${item.korean}</p>
+
+    </div>
+
+    `).join("");
+
 }
 
 document
@@ -72,6 +102,38 @@ document
     alert(
         `DAY ${progress.currentDay} 완료!`
     );
+
+});
+
+document
+.querySelectorAll(".tab-btn")
+.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        document
+        .querySelectorAll(".tab-btn")
+        .forEach(x =>
+            x.classList.remove("active")
+        );
+
+        btn.classList.add("active");
+
+        document.getElementById("dashboardTab").style.display = "none";
+        document.getElementById("grammarTab").style.display = "none";
+
+        const target = btn.dataset.tab;
+
+        if(target === "dashboard"){
+            document.getElementById("dashboardTab").style.display = "block";
+        }
+
+        if(target === "grammar"){
+            document.getElementById("grammarTab").style.display = "block";
+            renderGrammar();
+        }
+
+    });
 
 });
 
