@@ -62,35 +62,16 @@ function renderDashboard() {
 
 function renderTodayStudy() {
 
-    const grammarStart =
-    (progress.currentDay - 1) * 3;
-
-    const vocabStart =
-    (progress.currentDay - 1) * 20;
-
-    const kanjiStart =
-    (progress.currentDay - 1) * 5;
-
     let html = `
         <h3>오늘 학습 추천</h3>
 
-        <p>
-        DAY ${progress.currentDay}
-        </p>
+        <p>DAY ${progress.currentDay}</p>
 
         <hr>
 
-        <p>
-        문법 3개
-        </p>
-
-        <p>
-        단어 20개
-        </p>
-
-        <p>
-        한자 5개
-        </p>
+        <p>문법 3개</p>
+        <p>단어 20개</p>
+        <p>한자 5개</p>
     `;
 
     const target =
@@ -117,49 +98,133 @@ function renderGrammarCard() {
 
         <h3>${item.title}</h3>
 
-        <p>${item.meaning}</p>
-
-        <p>${item.example}</p>
-
         <button
         class="reading-btn"
-        onclick="toggleReading()">
+        onclick="toggleGrammarMeaning()">
 
-        읽는 방법 보기
+        ${
+            grammarMeaningVisible
+            ?
+            "뜻 숨기기"
+            :
+            "뜻 보기"
+        }
 
         </button>
 
-        <div
-        id="grammarReading"
-        class="reading-box"
-        style="display:none;">
+        ${
+            grammarMeaningVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.meaning}</p>
+            </div>
+            `
+            :
+            ""
+        }
 
-            <p>${item.reading}</p>
+        <button
+        class="reading-btn"
+        onclick="toggleGrammarExample()">
 
-            <p>${item.koreanReading}</p>
+        ${
+            grammarExampleVisible
+            ?
+            "예문 숨기기"
+            :
+            "예문 보기"
+        }
 
-            <p>${item.korean}</p>
+        </button>
 
-        </div>
+        ${
+            grammarExampleVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.example}</p>
+            </div>
+            `
+            :
+            ""
+        }
+
+        <button
+        class="reading-btn"
+        onclick="toggleGrammarReading()">
+
+        ${
+            grammarReadingVisible
+            ?
+            "읽기 숨기기"
+            :
+            "읽기 보기"
+        }
+
+        </button>
+
+        ${
+            grammarReadingVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.reading}</p>
+                <p>${item.koreanReading}</p>
+            </div>
+            `
+            :
+            ""
+        }
+
+        <button
+        class="reading-btn"
+        onclick="toggleGrammarKorean()">
+
+        ${
+            grammarKoreanVisible
+            ?
+            "해석 숨기기"
+            :
+            "해석 보기"
+        }
+
+        </button>
+
+        ${
+            grammarKoreanVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.korean}</p>
+            </div>
+            `
+            :
+            ""
+        }
+
+        <button
+        class="reading-btn"
+        onclick="saveFavorite({
+
+        id:'grammar-'+grammarIndex,
+
+        type:'문법',
+
+        title:item.title,
+
+        meaning:item.meaning
+
+        })">
+
+        ⭐ 중요
+
+        </button>
+
 
     </div>
 
     `;
-
-}
-
-function toggleReading() {
-
-    const box =
-    document.getElementById(
-        "grammarReading"
-    );
-
-    if(box.style.display === "none"){
-        box.style.display = "block";
-    }else{
-        box.style.display = "none";
-    }
 
 }
 
@@ -176,11 +241,58 @@ function renderVocabCard() {
 
         <h3>${item.word}</h3>
 
-        <p>${item.reading}</p>
+        <button
+        class="reading-btn"
+        onclick="toggleVocabReading()">
 
-        <p>${item.koreanReading}</p>
+        ${
+            vocabReadingVisible
+            ?
+            "읽기 숨기기"
+            :
+            "읽기 보기"
+        }
 
-        <p>${item.meaning}</p>
+        </button>
+
+        ${
+            vocabReadingVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.reading}</p>
+                <p>${item.koreanReading}</p>
+            </div>
+            `
+            :
+            ""
+        }
+
+        <button
+        class="reading-btn"
+        onclick="toggleVocabMeaning()">
+
+        ${
+            vocabMeaningVisible
+            ?
+            "뜻 숨기기"
+            :
+            "뜻 보기"
+        }
+
+        </button>
+
+        ${
+            vocabMeaningVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.meaning}</p>
+            </div>
+            `
+            :
+            ""
+        }
 
     </div>
 
@@ -201,15 +313,77 @@ function renderKanjiCard() {
 
         <h3>${item.kanji}</h3>
 
-        <p>${item.reading}</p>
+        <button
+        class="reading-btn"
+        onclick="toggleKanjiReading()">
 
-        <p>${item.koreanReading}</p>
+        ${
+            kanjiReadingVisible
+            ?
+            "읽기 숨기기"
+            :
+            "읽기 보기"
+        }
 
-        <p>${item.meaning}</p>
+        </button>
+
+        ${
+            kanjiReadingVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.reading}</p>
+                <p>${item.koreanReading}</p>
+            </div>
+            `
+            :
+            ""
+        }
+
+        <button
+        class="reading-btn"
+        onclick="toggleKanjiMeaning()">
+
+        ${
+            kanjiMeaningVisible
+            ?
+            "뜻 숨기기"
+            :
+            "뜻 보기"
+        }
+
+        </button>
+
+        ${
+            kanjiMeaningVisible
+            ?
+            `
+            <div class="reading-box">
+                <p>${item.meaning}</p>
+            </div>
+            `
+            :
+            ""
+        }
 
     </div>
 
     `;
+
+}
+
+function toggleReading() {
+
+    const box =
+    document.getElementById(
+        "grammarReading"
+    );
+
+    if(box.style.display === "none"){
+        box.style.display = "block";
+    }else{
+        box.style.display = "none";
+    }
 
 }
 
@@ -279,6 +453,146 @@ document
         }
 
     });
+
+});
+
+// ======================
+// GRAMMAR
+// ======================
+
+document.getElementById("grammarPrev")
+.addEventListener("click", () => {
+
+    grammarIndex--;
+
+    if(grammarIndex < 0){
+        grammarIndex =
+        GRAMMAR_DATA.length - 1;
+    }
+
+    resetGrammarStudy();
+    renderGrammarCard();
+
+});
+
+document.getElementById("grammarNext")
+.addEventListener("click", () => {
+
+    grammarIndex++;
+
+    if(grammarIndex >= GRAMMAR_DATA.length){
+        grammarIndex = 0;
+    }
+
+    resetGrammarStudy();
+    renderGrammarCard();
+
+});
+
+document.getElementById("grammarRandom")
+.addEventListener("click", () => {
+
+    grammarIndex =
+    Math.floor(
+        Math.random() *
+        GRAMMAR_DATA.length
+    );
+
+    resetGrammarStudy();
+    renderGrammarCard();
+
+});
+
+// ======================
+// VOCAB
+// ======================
+
+document.getElementById("vocabPrev")
+.addEventListener("click", () => {
+
+    vocabIndex--;
+
+    if(vocabIndex < 0){
+        vocabIndex =
+        VOCAB_DATA.length - 1;
+    }
+    resetVocabStudy();
+    renderVocabCard();
+
+});
+
+document.getElementById("vocabNext")
+.addEventListener("click", () => {
+
+    vocabIndex++;
+
+    if(vocabIndex >= VOCAB_DATA.length){
+        vocabIndex = 0;
+    }
+
+    resetVocabStudy();
+    renderVocabCard();
+
+});
+
+document.getElementById("vocabRandom")
+.addEventListener("click", () => {
+
+    vocabIndex =
+    Math.floor(
+        Math.random() *
+        VOCAB_DATA.length
+    );
+
+    resetVocabStudy();
+    renderVocabCard();
+
+});
+
+// ======================
+// KANJI
+// ======================
+
+document.getElementById("kanjiPrev")
+.addEventListener("click", () => {
+
+    kanjiIndex--;
+
+    if(kanjiIndex < 0){
+        kanjiIndex =
+        KANJI_DATA.length - 1;
+    }
+
+    resetVocabStudy();
+    renderKanjiCard();
+
+});
+
+document.getElementById("kanjiNext")
+.addEventListener("click", () => {
+
+    kanjiIndex++;
+
+    if(kanjiIndex >= KANJI_DATA.length){
+        kanjiIndex = 0;
+    }
+
+    resetVocabStudy();
+    renderKanjiCard();
+
+});
+
+document.getElementById("kanjiRandom")
+.addEventListener("click", () => {
+
+    kanjiIndex =
+    Math.floor(
+        Math.random() *
+        KANJI_DATA.length
+    );
+
+    resetVocabStudy();
+    renderKanjiCard();
 
 });
 

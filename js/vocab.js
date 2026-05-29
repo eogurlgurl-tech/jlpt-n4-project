@@ -1,38 +1,54 @@
 const VOCAB_DATA = [
 
-{
-    word:"駅",
-    reading:"えき",
-    koreanReading:"에키",
-    meaning:"역"
-},
-
-{
-    word:"学校",
-    reading:"がっこう",
-    koreanReading:"갓코우",
-    meaning:"학교"
-},
-
-{
-    word:"病院",
-    reading:"びょういん",
-    koreanReading:"뵤우인",
-    meaning:"병원"
-},
-
-{
-    word:"先生",
-    reading:"せんせい",
-    koreanReading:"센세이",
-    meaning:"선생님"
-},
-
-{
-    word:"会社",
-    reading:"かいしゃ",
-    koreanReading:"카이샤",
-    meaning:"회사"
-}
-
+{word:"駅",reading:"えき",koreanReading:"에키",meaning:"역"},
+{word:"学校",reading:"がっこう",koreanReading:"갓코우",meaning:"학교"},
+{word:"先生",reading:"せんせい",koreanReading:"센세이",meaning:"선생님"},
+{word:"会社",reading:"かいしゃ",koreanReading:"카이샤",meaning:"회사"},
+{word:"病院",reading:"びょういん",koreanReading:"뵤우인",meaning:"병원"},
+{word:"学生",reading:"がくせい",koreanReading:"가쿠세이",meaning:"학생"},
+{word:"銀行",reading:"ぎんこう",koreanReading:"긴코우",meaning:"은행"},
+{word:"郵便局",reading:"ゆうびんきょく",koreanReading:"유우빈쿄쿠",meaning:"우체국"},
+{word:"図書館",reading:"としょかん",koreanReading:"토쇼칸",meaning:"도서관"},
+{word:"教室",reading:"きょうしつ",koreanReading:"쿄우시츠",meaning:"교실"},
+{word:"食堂",reading:"しょくどう",koreanReading:"쇼쿠도우",meaning:"식당"},
+{word:"電車",reading:"でんしゃ",koreanReading:"덴샤",meaning:"전철"},
+{word:"自転車",reading:"じてんしゃ",koreanReading:"지텐샤",meaning:"자전거"},
+{word:"飛行機",reading:"ひこうき",koreanReading:"히코우키",meaning:"비행기"},
+{word:"車",reading:"くるま",koreanReading:"쿠루마",meaning:"자동차"},
+{word:"家",reading:"いえ",koreanReading:"이에",meaning:"집"},
+{word:"部屋",reading:"へや",koreanReading:"헤야",meaning:"방"},
+{word:"机",reading:"つくえ",koreanReading:"츠쿠에",meaning:"책상"},
+{word:"椅子",reading:"いす",koreanReading:"이스",meaning:"의자"},
+{word:"時計",reading:"とけい",koreanReading:"토케이",meaning:"시계"},
+{word:"携帯電話",reading:"けいたいでんわ",koreanReading:"케이타이덴와",meaning:"휴대전화"},
+{word:"新聞",reading:"しんぶん",koreanReading:"신분",meaning:"신문"},
+{word:"雑誌",reading:"ざっし",koreanReading:"잣시",meaning:"잡지"},
+{word:"本",reading:"ほん",koreanReading:"혼",meaning:"책"},
+{word:"辞書",reading:"じしょ",koreanReading:"지쇼",meaning:"사전"},
+{word:"日本語",reading:"にほんご",koreanReading:"니혼고",meaning:"일본어"},
+{word:"英語",reading:"えいご",koreanReading:"에이고",meaning:"영어"},
+{word:"韓国語",reading:"かんこくご",koreanReading:"칸코쿠고",meaning:"한국어"},
+{word:"友達",reading:"ともだち",koreanReading:"토모다치",meaning:"친구"},
+{word:"家族",reading:"かぞく",koreanReading:"카조쿠",meaning:"가족"},
+{word:"父",reading:"ちち",koreanReading:"치치",meaning:"아버지"},
+{word:"母",reading:"はは",koreanReading:"하하",meaning:"어머니"},
+{word:"兄",reading:"あに",koreanReading:"아니",meaning:"형"},
+{word:"姉",reading:"あね",koreanReading:"아네",meaning:"누나"},
+{word:"弟",reading:"おとうと",koreanReading:"오토우토",meaning:"남동생"},
+{word:"妹",reading:"いもうと",koreanReading:"이모우토",meaning:"여동생"},
+{word:"朝",reading:"あさ",koreanReading:"아사",meaning:"아침"},
+{word:"昼",reading:"ひる",koreanReading:"히루",meaning:"점심"},
+{word:"夜",reading:"よる",koreanReading:"요루",meaning:"밤"},
+{word:"今日",reading:"きょう",koreanReading:"쿄우",meaning:"오늘"},
+{word:"昨日",reading:"きのう",koreanReading:"키노우",meaning:"어제"},
+{word:"明日",reading:"あした",koreanReading:"아시타",meaning:"내일"},
+{word:"今週",reading:"こんしゅう",koreanReading:"콘슈우",meaning:"이번 주"},
+{word:"来週",reading:"らいしゅう",koreanReading:"라이슈우",meaning:"다음 주"},
+{word:"時間",reading:"じかん",koreanReading:"지칸",meaning:"시간"},
+{word:"分",reading:"ふん",koreanReading:"훈",meaning:"분"},
+{word:"水",reading:"みず",koreanReading:"미즈",meaning:"물"},
+{word:"お茶",reading:"おちゃ",koreanReading:"오챠",meaning:"차"},
+{word:"ご飯",reading:"ごはん",koreanReading:"고항",meaning:"밥"},
+{word:"肉",reading:"にく",koreanReading:"니쿠",meaning:"고기"},
+{word:"魚",reading:"さかな",koreanReading:"사카나",meaning:"생선"}
 ];
