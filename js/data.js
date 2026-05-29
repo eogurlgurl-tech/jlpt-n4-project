@@ -9,3 +9,42 @@ const STUDY_CONFIG = {
     kanjiTarget:300
 
 };
+
+const GRAMMAR_DATA = [
+
+{
+title:"～たい",
+meaning:"~하고 싶다",
+example:"日本へ行きたいです。",
+korean:"일본에 가고 싶습니다."
+},
+
+{
+title:"～なければなりません",
+meaning:"~해야 한다",
+example:"勉強しなければなりません。",
+korean:"공부해야 합니다."
+},
+
+{
+title:"～てもいいです",
+meaning:"~해도 된다",
+example:"入ってもいいです。",
+korean:"들어가도 됩니다."
+},
+
+{
+title:"～てはいけません",
+meaning:"~하면 안 된다",
+example:"ここで食べてはいけません。",
+korean:"여기서 먹으면 안 됩니다."
+},
+
+{
+title:"～ことができます",
+meaning:"~할 수 있다",
+example:"日本語を話すことができます。",
+korean:"일본어를 말할 수 있습니다."
+}
+
+];
