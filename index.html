@@ -16,7 +16,41 @@
     <p>180일 완주 목표</p>
 </header>
 
+<nav class="main-nav">
+
+    <button class="tab-btn active" data-tab="dashboard">
+        대시보드
+    </button>
+
+    <button class="tab-btn" data-tab="grammar">
+        문법
+    </button>
+
+    <button class="tab-btn" data-tab="vocab">
+        단어
+    </button>
+
+    <button class="tab-btn" data-tab="kanji">
+        한자
+    </button>
+
+    <button class="tab-btn" data-tab="reading">
+        독해
+    </button>
+
+    <button class="tab-btn" data-tab="listening">
+        청해
+    </button>
+
+    <button class="tab-btn" data-tab="mock">
+        모의고사
+    </button>
+
+</nav>
+
 <main>
+
+<section id="dashboardTab">
 
 <section class="dashboard-card">
 
@@ -76,6 +110,20 @@
 <button id="startBtn">
     오늘 학습 시작
 </button>
+
+</section>
+
+<section id="grammarTab" style="display:none">
+
+    <section class="dashboard-card">
+
+        <h2>N4 문법 학습</h2>
+
+        <div id="grammarCard"></div>
+
+    </section>
+
+</section>
 
 </main>
 
