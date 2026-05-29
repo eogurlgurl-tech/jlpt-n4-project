@@ -6,16 +6,18 @@
 
 <title>JLPT N4 합격 프로젝트</title>
 
-<!-- TEST -->
-
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
 <header class="header">
+
     <h1>JLPT N4 합격 프로젝트</h1>
+
     <p>180일 완주 목표</p>
+
 </header>
 
 <nav class="main-nav">
@@ -36,92 +38,187 @@
         한자
     </button>
 
-    <button class="tab-btn" data-tab="reading">
-        독해
-    </button>
-
-    <button class="tab-btn" data-tab="listening">
-        청해
-    </button>
-
-    <button class="tab-btn" data-tab="mock">
-        모의고사
-    </button>
-
 </nav>
 
 <main>
 
+<!-- DASHBOARD -->
+
 <section id="dashboardTab">
 
-<section class="dashboard-card">
+    <section class="dashboard-card">
 
-    <h2>DAY 진행률</h2>
+        <h2>DAY 진행률</h2>
 
-    <div id="dayCounter">
-        DAY 1 / 180
-    </div>
+        <div id="dayCounter">
+            DAY 1 / 180
+        </div>
+
+    </section>
+
+    <section class="dashboard-card">
+
+        <h2>오늘 학습</h2>
+
+        <ul>
+
+            <li>문법 3개</li>
+
+            <li>단어 20개</li>
+
+            <li>한자 5개</li>
+
+        </ul>
+
+    </section>
+
+    <section class="dashboard-card">
+
+        <h2>현재 진행률</h2>
+
+        <div class="progress-item">
+
+            문법
+
+            <span id="grammarProgress">
+                0%
+            </span>
+
+        </div>
+
+        <div class="progress-item">
+
+            단어
+
+            <span id="vocabProgress">
+                0%
+            </span>
+
+        </div>
+
+        <div class="progress-item">
+
+            한자
+
+            <span id="kanjiProgress">
+                0%
+            </span>
+
+        </div>
+
+    </section>
+
+    <section class="dashboard-card">
+
+        <h2>예상 합격 레벨</h2>
+
+        <div id="jlptLevel">
+
+            JLPT N5 준비중
+
+        </div>
+
+    </section>
+
+    <button id="startBtn">
+
+        오늘 학습 시작
+
+    </button>
 
 </section>
 
-<section class="dashboard-card">
-
-    <h2>오늘 학습</h2>
-
-    <ul>
-        <li>문법 3개</li>
-        <li>단어 20개</li>
-        <li>한자 5개</li>
-        <li>독해 1개</li>
-        <li>청해 1개</li>
-    </ul>
-
-</section>
-
-<section class="dashboard-card">
-
-    <h2>현재 진행률</h2>
-
-    <div class="progress-item">
-        문법
-        <span id="grammarProgress">0%</span>
-    </div>
-
-    <div class="progress-item">
-        단어
-        <span id="vocabProgress">0%</span>
-    </div>
-
-    <div class="progress-item">
-        한자
-        <span id="kanjiProgress">0%</span>
-    </div>
-
-</section>
-
-<section class="dashboard-card">
-
-    <h2>예상 합격률</h2>
-
-    <div id="jlptLevel">
-        JLPT N5 준비중
-    </div>
-
-</section>
-
-<button id="startBtn">
-    오늘 학습 시작
-</button>
-
-</section>
+<!-- GRAMMAR -->
 
 <section id="grammarTab" style="display:none">
 
     <section class="dashboard-card">
 
-        <h2>N4 문법 학습</h2>
+        <h2>문법 학습</h2>
 
-        <div id="grammarCard"></div>
+        <div id="grammarCard">
+
+        </div>
+
+        <div class="card-nav">
+
+            <button id="grammarPrev">
+                ← 이전
+            </button>
+
+            <button id="grammarRandom">
+                🎲 랜덤
+            </button>
+
+            <button id="grammarNext">
+                다음 →
+            </button>
+
+        </div>
+
+    </section>
+
+</section>
+
+<!-- VOCAB -->
+
+<section id="vocabTab" style="display:none">
+
+    <section class="dashboard-card">
+
+        <h2>단어 학습</h2>
+
+        <div id="vocabCard">
+
+        </div>
+
+        <div class="card-nav">
+
+            <button id="vocabPrev">
+                ← 이전
+            </button>
+
+            <button id="vocabRandom">
+                🎲 랜덤
+            </button>
+
+            <button id="vocabNext">
+                다음 →
+            </button>
+
+        </div>
+
+    </section>
+
+</section>
+
+<!-- KANJI -->
+
+<section id="kanjiTab" style="display:none">
+
+    <section class="dashboard-card">
+
+        <h2>한자 학습</h2>
+
+        <div id="kanjiCard">
+
+        </div>
+
+        <div class="card-nav">
+
+            <button id="kanjiPrev">
+                ← 이전
+            </button>
+
+            <button id="kanjiRandom">
+                🎲 랜덤
+            </button>
+
+            <button id="kanjiNext">
+                다음 →
+            </button>
+
+        </div>
 
     </section>
 
@@ -129,7 +226,9 @@
 
 </main>
 
-<script src="js/data.js"></script>
+<script src="js/grammar.js"></script>
+<script src="js/vocab.js"></script>
+<script src="js/kanji.js"></script>
 <script src="js/app.js"></script>
 
 </body>
