@@ -25,41 +25,6 @@ function saveData() {
 
 }
 
-function renderDashboard() {
-
-    document.getElementById("dayCounter").innerText =
-    `DAY ${progress.currentDay} / 180`;
-
-    document.getElementById("grammarProgress").innerText =
-    progress.grammar + "%";
-
-    document.getElementById("vocabProgress").innerText =
-    progress.vocab + "%";
-
-    document.getElementById("kanjiProgress").innerText =
-    progress.kanji + "%";
-
-    let level = "JLPT N5 준비중";
-
-    if(progress.grammar >= 30){
-        level = "JLPT N5 합격권";
-    }
-
-    if(progress.grammar >= 60){
-        level = "JLPT N4 도전권";
-    }
-
-    if(progress.grammar >= 85){
-        level = "JLPT N4 합격권";
-    }
-
-    document.getElementById("jlptLevel").innerText =
-    level;
-
-    renderTodayStudy();
-
-}
-
 function renderTodayStudy() {
 
     let html = `
@@ -82,293 +47,6 @@ function renderTodayStudy() {
     if(target){
         target.innerHTML = html;
     }
-
-}
-
-function renderGrammarCard() {
-
-    const item =
-    GRAMMAR_DATA[grammarIndex];
-
-    document.getElementById(
-        "grammarCard"
-    ).innerHTML = `
-
-    <div class="grammar-item">
-
-        <h3>${item.title}</h3>
-
-        <button
-        class="reading-btn"
-        onclick="toggleGrammarMeaning()">
-
-        ${
-            grammarMeaningVisible
-            ?
-            "뜻 숨기기"
-            :
-            "뜻 보기"
-        }
-
-        </button>
-
-        ${
-            grammarMeaningVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.meaning}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-        <button
-        class="reading-btn"
-        onclick="toggleGrammarExample()">
-
-        ${
-            grammarExampleVisible
-            ?
-            "예문 숨기기"
-            :
-            "예문 보기"
-        }
-
-        </button>
-
-        ${
-            grammarExampleVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.example}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-        <button
-        class="reading-btn"
-        onclick="toggleGrammarReading()">
-
-        ${
-            grammarReadingVisible
-            ?
-            "읽기 숨기기"
-            :
-            "읽기 보기"
-        }
-
-        </button>
-
-        ${
-            grammarReadingVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.reading}</p>
-                <p>${item.koreanReading}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-        <button
-        class="reading-btn"
-        onclick="toggleGrammarKorean()">
-
-        ${
-            grammarKoreanVisible
-            ?
-            "해석 숨기기"
-            :
-            "해석 보기"
-        }
-
-        </button>
-
-        ${
-            grammarKoreanVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.korean}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-        <button
-        class="reading-btn"
-        onclick="saveFavorite({
-
-        id:'grammar-'+grammarIndex,
-
-        type:'문법',
-
-        title:item.title,
-
-        meaning:item.meaning
-
-        })">
-
-        ⭐ 중요
-
-        </button>
-
-
-    </div>
-
-    `;
-
-}
-
-function renderVocabCard() {
-
-    const item =
-    VOCAB_DATA[vocabIndex];
-
-    document.getElementById(
-        "vocabCard"
-    ).innerHTML = `
-
-    <div class="grammar-item">
-
-        <h3>${item.word}</h3>
-
-        <button
-        class="reading-btn"
-        onclick="toggleVocabReading()">
-
-        ${
-            vocabReadingVisible
-            ?
-            "읽기 숨기기"
-            :
-            "읽기 보기"
-        }
-
-        </button>
-
-        ${
-            vocabReadingVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.reading}</p>
-                <p>${item.koreanReading}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-        <button
-        class="reading-btn"
-        onclick="toggleVocabMeaning()">
-
-        ${
-            vocabMeaningVisible
-            ?
-            "뜻 숨기기"
-            :
-            "뜻 보기"
-        }
-
-        </button>
-
-        ${
-            vocabMeaningVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.meaning}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-    </div>
-
-    `;
-
-}
-
-function renderKanjiCard() {
-
-    const item =
-    KANJI_DATA[kanjiIndex];
-
-    document.getElementById(
-        "kanjiCard"
-    ).innerHTML = `
-
-    <div class="grammar-item">
-
-        <h3>${item.kanji}</h3>
-
-        <button
-        class="reading-btn"
-        onclick="toggleKanjiReading()">
-
-        ${
-            kanjiReadingVisible
-            ?
-            "읽기 숨기기"
-            :
-            "읽기 보기"
-        }
-
-        </button>
-
-        ${
-            kanjiReadingVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.reading}</p>
-                <p>${item.koreanReading}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-        <button
-        class="reading-btn"
-        onclick="toggleKanjiMeaning()">
-
-        ${
-            kanjiMeaningVisible
-            ?
-            "뜻 숨기기"
-            :
-            "뜻 보기"
-        }
-
-        </button>
-
-        ${
-            kanjiMeaningVisible
-            ?
-            `
-            <div class="reading-box">
-                <p>${item.meaning}</p>
-            </div>
-            `
-            :
-            ""
-        }
-
-    </div>
-
-    `;
 
 }
 
@@ -516,8 +194,8 @@ document.getElementById("vocabPrev")
         vocabIndex =
         VOCAB_DATA.length - 1;
     }
-    resetVocabStudy();
-    renderVocabCard();
+    resetKanjiStudy();
+    renderKanjiCard();
 
 });
 
@@ -530,8 +208,8 @@ document.getElementById("vocabNext")
         vocabIndex = 0;
     }
 
-    resetVocabStudy();
-    renderVocabCard();
+    resetKanjiStudy();
+    renderKanjiCard();
 
 });
 
@@ -544,8 +222,8 @@ document.getElementById("vocabRandom")
         VOCAB_DATA.length
     );
 
-    resetVocabStudy();
-    renderVocabCard();
+    resetKanjiStudy();
+    renderKanjiCard();
 
 });
 
