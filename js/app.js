@@ -61,7 +61,7 @@ function renderGrammar(){
     document.getElementById("grammarCard");
 
     target.innerHTML =
-    GRAMMAR_DATA.map(item => `
+    GRAMMAR_DATA.map((item,index) => `
 
     <div class="grammar-item">
 
@@ -76,9 +76,55 @@ function renderGrammar(){
         <p><strong>해석</strong></p>
         <p>${item.korean}</p>
 
+        <button
+            class="reading-btn"
+            onclick="toggleReading(${index})">
+
+            읽는 방법 보기
+
+        </button>
+
+        <div
+            id="reading-${index}"
+            class="reading-box"
+            style="display:none;">
+
+            <p>
+            <strong>히라가나 읽기</strong>
+            </p>
+
+            <p>${item.reading}</p>
+
+            <p>
+            <strong>한글식 발음</strong>
+            </p>
+
+            <p>${item.koreanReading}</p>
+
+        </div>
+
     </div>
 
     `).join("");
+
+}
+
+function toggleReading(index){
+
+    const box =
+    document.getElementById(
+        `reading-${index}`
+    );
+
+    if(box.style.display === "none"){
+
+        box.style.display = "block";
+
+    }else{
+
+        box.style.display = "none";
+
+    }
 
 }
 
