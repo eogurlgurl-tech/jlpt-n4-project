@@ -12,8 +12,31 @@ body{
     padding:20px;
 }
 
+.main-nav{
+    max-width:1000px;
+    margin:20px auto;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.tab-btn{
+    border:none;
+    background:#ddd;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.tab-btn.active{
+    background:#2563eb;
+    color:white;
+}
+
 main{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
     padding:20px;
 }
@@ -46,4 +69,11 @@ main{
     color:white;
     font-size:18px;
     cursor:pointer;
+}
+
+.grammar-item{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:15px;
 }
