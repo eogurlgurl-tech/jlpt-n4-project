@@ -4,14 +4,17 @@ const defaultData = {
     currentDay: 1,
     grammar: 0,
     vocab: 0,
-    kanji: 0,
-    streak: 0
+    kanji: 0
 };
 
 let progress =
 JSON.parse(
     localStorage.getItem(STORAGE_KEY)
 ) || defaultData;
+
+let grammarIndex = 0;
+let vocabIndex = 0;
+let kanjiIndex = 0;
 
 function saveData() {
 
@@ -25,7 +28,7 @@ function saveData() {
 function renderDashboard() {
 
     document.getElementById("dayCounter").innerText =
-    `DAY ${progress.currentDay} / ${STUDY_CONFIG.totalDays}`;
+    `DAY ${progress.currentDay} / 180`;
 
     document.getElementById("grammarProgress").innerText =
     progress.grammar + "%";
@@ -55,65 +58,52 @@ function renderDashboard() {
 
 }
 
-function renderGrammar(){
+function renderGrammarCard() {
 
-    const target =
-    document.getElementById("grammarCard");
+    const item = GRAMMAR_DATA[grammarIndex];
 
-    target.innerHTML =
-    GRAMMAR_DATA.map((item,index) => `
+    document.getElementById("grammarCard").innerHTML = `
 
     <div class="grammar-item">
 
         <h3>${item.title}</h3>
 
-        <p><strong>뜻</strong></p>
         <p>${item.meaning}</p>
 
-        <p><strong>예문</strong></p>
         <p>${item.example}</p>
 
-        <p><strong>해석</strong></p>
-        <p>${item.korean}</p>
-
         <button
-            class="reading-btn"
-            onclick="toggleReading(${index})">
+        class="reading-btn"
+        onclick="toggleReading()">
 
-            읽는 방법 보기
+        읽는 방법 보기
 
         </button>
 
         <div
-            id="reading-${index}"
-            class="reading-box"
-            style="display:none;">
-
-            <p>
-            <strong>히라가나 읽기</strong>
-            </p>
+        id="grammarReading"
+        class="reading-box"
+        style="display:none;">
 
             <p>${item.reading}</p>
 
-            <p>
-            <strong>한글식 발음</strong>
-            </p>
-
             <p>${item.koreanReading}</p>
+
+            <p>${item.korean}</p>
 
         </div>
 
     </div>
 
-    `).join("");
+    `;
 
 }
 
-function toggleReading(index){
+function toggleReading() {
 
     const box =
     document.getElementById(
-        `reading-${index}`
+        "grammarReading"
     );
 
     if(box.style.display === "none"){
@@ -125,6 +115,50 @@ function toggleReading(index){
         box.style.display = "none";
 
     }
+
+}
+
+function renderVocabCard() {
+
+    const item = VOCAB_DATA[vocabIndex];
+
+    document.getElementById("vocabCard").innerHTML = `
+
+    <div class="grammar-item">
+
+        <h3>${item.word}</h3>
+
+        <p>${item.reading}</p>
+
+        <p>${item.koreanReading}</p>
+
+        <p>${item.meaning}</p>
+
+    </div>
+
+    `;
+
+}
+
+function renderKanjiCard() {
+
+    const item = KANJI_DATA[kanjiIndex];
+
+    document.getElementById("kanjiCard").innerHTML = `
+
+    <div class="grammar-item">
+
+        <h3>${item.kanji}</h3>
+
+        <p>${item.reading}</p>
+
+        <p>${item.koreanReading}</p>
+
+        <p>${item.meaning}</p>
+
+    </div>
+
+    `;
 
 }
 
@@ -167,16 +201,28 @@ document
 
         document.getElementById("dashboardTab").style.display = "none";
         document.getElementById("grammarTab").style.display = "none";
+        document.getElementById("vocabTab").style.display = "none";
+        document.getElementById("kanjiTab").style.display = "none";
 
-        const target = btn.dataset.tab;
+        const tab = btn.dataset.tab;
 
-        if(target === "dashboard"){
+        if(tab === "dashboard"){
             document.getElementById("dashboardTab").style.display = "block";
         }
 
-        if(target === "grammar"){
+        if(tab === "grammar"){
             document.getElementById("grammarTab").style.display = "block";
-            renderGrammar();
+            renderGrammarCard();
+        }
+
+        if(tab === "vocab"){
+            document.getElementById("vocabTab").style.display = "block";
+            renderVocabCard();
+        }
+
+        if(tab === "kanji"){
+            document.getElementById("kanjiTab").style.display = "block";
+            renderKanjiCard();
         }
 
     });
