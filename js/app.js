@@ -56,13 +56,62 @@ function renderDashboard() {
     document.getElementById("jlptLevel").innerText =
     level;
 
+    renderTodayStudy();
+
+}
+
+function renderTodayStudy() {
+
+    const grammarStart =
+    (progress.currentDay - 1) * 3;
+
+    const vocabStart =
+    (progress.currentDay - 1) * 20;
+
+    const kanjiStart =
+    (progress.currentDay - 1) * 5;
+
+    let html = `
+        <h3>오늘 학습 추천</h3>
+
+        <p>
+        DAY ${progress.currentDay}
+        </p>
+
+        <hr>
+
+        <p>
+        문법 3개
+        </p>
+
+        <p>
+        단어 20개
+        </p>
+
+        <p>
+        한자 5개
+        </p>
+    `;
+
+    const target =
+    document.getElementById(
+        "todayStudyArea"
+    );
+
+    if(target){
+        target.innerHTML = html;
+    }
+
 }
 
 function renderGrammarCard() {
 
-    const item = GRAMMAR_DATA[grammarIndex];
+    const item =
+    GRAMMAR_DATA[grammarIndex];
 
-    document.getElementById("grammarCard").innerHTML = `
+    document.getElementById(
+        "grammarCard"
+    ).innerHTML = `
 
     <div class="grammar-item">
 
@@ -107,22 +156,21 @@ function toggleReading() {
     );
 
     if(box.style.display === "none"){
-
         box.style.display = "block";
-
     }else{
-
         box.style.display = "none";
-
     }
 
 }
 
 function renderVocabCard() {
 
-    const item = VOCAB_DATA[vocabIndex];
+    const item =
+    VOCAB_DATA[vocabIndex];
 
-    document.getElementById("vocabCard").innerHTML = `
+    document.getElementById(
+        "vocabCard"
+    ).innerHTML = `
 
     <div class="grammar-item">
 
@@ -142,9 +190,12 @@ function renderVocabCard() {
 
 function renderKanjiCard() {
 
-    const item = KANJI_DATA[kanjiIndex];
+    const item =
+    KANJI_DATA[kanjiIndex];
 
-    document.getElementById("kanjiCard").innerHTML = `
+    document.getElementById(
+        "kanjiCard"
+    ).innerHTML = `
 
     <div class="grammar-item">
 
@@ -177,6 +228,7 @@ document
     progress.kanji += 1;
 
     saveData();
+
     renderDashboard();
 
     alert(
@@ -204,7 +256,8 @@ document
         document.getElementById("vocabTab").style.display = "none";
         document.getElementById("kanjiTab").style.display = "none";
 
-        const tab = btn.dataset.tab;
+        const tab =
+        btn.dataset.tab;
 
         if(tab === "dashboard"){
             document.getElementById("dashboardTab").style.display = "block";
