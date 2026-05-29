@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>JLPT N4 합격 프로젝트</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>JLPT N4 합격 프로젝트</h1>
+    <p>180일 완주 목표</p>
+</header>
+
+<main>
+
+<section class="dashboard-card">
+
+    <h2>DAY 진행률</h2>
+
+    <div id="dayCounter">
+        DAY 1 / 180
+    </div>
+
+</section>
+
+<section class="dashboard-card">
+
+    <h2>오늘 학습</h2>
+
+    <ul>
+        <li>문법 3개</li>
+        <li>단어 20개</li>
+        <li>한자 5개</li>
+        <li>독해 1개</li>
+        <li>청해 1개</li>
+    </ul>
+
+</section>
+
+<section class="dashboard-card">
+
+    <h2>현재 진행률</h2>
+
+    <div class="progress-item">
+        문법
+        <span id="grammarProgress">0%</span>
+    </div>
+
+    <div class="progress-item">
+        단어
+        <span id="vocabProgress">0%</span>
+    </div>
+
+    <div class="progress-item">
+        한자
+        <span id="kanjiProgress">0%</span>
+    </div>
+
+</section>
+
+<section class="dashboard-card">
+
+    <h2>예상 합격률</h2>
+
+    <div id="jlptLevel">
+        JLPT N5 준비중
+    </div>
+
+</section>
+
+<button id="startBtn">
+    오늘 학습 시작
+</button>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
