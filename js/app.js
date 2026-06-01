@@ -130,6 +130,18 @@ document
             renderKanjiCard();
         }
 
+        if(tab === "quiz"){
+
+            if(quizTab){
+                quizTab.style.display = "block";
+            }
+
+            if(typeof renderQuiz === "function"){
+                renderQuiz();
+            }
+
+        }
+
     });
 
 });

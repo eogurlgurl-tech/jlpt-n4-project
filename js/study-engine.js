@@ -1,4 +1,4 @@
-// Version 4.5.0
+// Version 6.5.0
 // JLPT Study Engine
 
 let vocabReadingVisible = false;
@@ -11,6 +11,10 @@ let grammarMeaningVisible = false;
 let grammarExampleVisible = false;
 let grammarReadingVisible = false;
 let grammarKoreanVisible = false;
+
+// ======================
+// RESET
+// ======================
 
 function resetVocabStudy() {
 
@@ -34,6 +38,10 @@ function resetGrammarStudy() {
     grammarKoreanVisible = false;
 
 }
+
+// ======================
+// TOGGLE
+// ======================
 
 function toggleVocabReading() {
 
@@ -107,12 +115,19 @@ function toggleGrammarKorean() {
 
 }
 
-const FAVORITE_KEY = "jlpt_favorites";
+// ======================
+// FAVORITE
+// ======================
+
+const FAVORITE_KEY =
+"jlpt_favorites";
 
 function getFavorites() {
 
     return JSON.parse(
-        localStorage.getItem(FAVORITE_KEY)
+        localStorage.getItem(
+            FAVORITE_KEY
+        )
     ) || [];
 
 }
@@ -153,6 +168,88 @@ function removeFavorite(id){
     localStorage.setItem(
         FAVORITE_KEY,
         JSON.stringify(filtered)
+    );
+
+}
+
+// ======================
+// WRONG ANSWER
+// ======================
+
+const WRONG_NOTE_KEY =
+"jlpt_wrong_answers";
+
+function getWrongAnswers(){
+
+    return JSON.parse(
+        localStorage.getItem(
+            WRONG_NOTE_KEY
+        )
+    ) || [];
+
+}
+
+function saveWrongAnswer(item){
+
+    const wrongAnswers =
+    getWrongAnswers();
+
+    const exists =
+    wrongAnswers.some(
+        x => x.id === item.id
+    );
+
+    if(exists){
+        return;
+    }
+
+    wrongAnswers.push({
+
+        ...item,
+
+        savedAt:
+        Date.now()
+
+    });
+
+    localStorage.setItem(
+
+        WRONG_NOTE_KEY,
+
+        JSON.stringify(
+            wrongAnswers
+        )
+
+    );
+
+}
+
+function removeWrongAnswer(id){
+
+    const wrongAnswers =
+    getWrongAnswers();
+
+    const filtered =
+    wrongAnswers.filter(
+        x => x.id !== id
+    );
+
+    localStorage.setItem(
+
+        WRONG_NOTE_KEY,
+
+        JSON.stringify(
+            filtered
+        )
+
+    );
+
+}
+
+function clearWrongAnswers(){
+
+    localStorage.removeItem(
+        WRONG_NOTE_KEY
     );
 
 }

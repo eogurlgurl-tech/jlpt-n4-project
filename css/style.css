@@ -166,3 +166,19 @@ main{
     }
 
 }
+
+
+.quiz-card{
+    text-align:center;
+}
+
+.quiz-option{
+    width:100%;
+    margin:8px 0;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
