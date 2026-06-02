@@ -57,6 +57,10 @@ function toggleReading() {
         "grammarReading"
     );
 
+    if(!box){
+        return;
+    }
+
     if(box.style.display === "none"){
         box.style.display = "block";
     }else{
@@ -103,40 +107,118 @@ document
 
         btn.classList.add("active");
 
-        document.getElementById("dashboardTab").style.display = "none";
-        document.getElementById("grammarTab").style.display = "none";
-        document.getElementById("vocabTab").style.display = "none";
-        document.getElementById("kanjiTab").style.display = "none";
+        document.getElementById(
+            "dashboardTab"
+        ).style.display = "none";
+
+        document.getElementById(
+            "grammarTab"
+        ).style.display = "none";
+
+        document.getElementById(
+            "vocabTab"
+        ).style.display = "none";
+
+        document.getElementById(
+            "kanjiTab"
+        ).style.display = "none";
+
+        const favoriteTab =
+        document.getElementById(
+            "favoriteTab"
+        );
+
+        if(favoriteTab){
+            favoriteTab.style.display =
+            "none";
+        }
+
+        const quizTab =
+        document.getElementById(
+            "quizTab"
+        );
+
+        if(quizTab){
+            quizTab.style.display =
+            "none";
+        }
 
         const tab =
         btn.dataset.tab;
 
         if(tab === "dashboard"){
-            document.getElementById("dashboardTab").style.display = "block";
+
+            document
+            .getElementById(
+                "dashboardTab"
+            )
+            .style.display =
+            "block";
+
         }
 
         if(tab === "grammar"){
-            document.getElementById("grammarTab").style.display = "block";
+
+            document
+            .getElementById(
+                "grammarTab"
+            )
+            .style.display =
+            "block";
+
             renderGrammarCard();
+
         }
 
         if(tab === "vocab"){
-            document.getElementById("vocabTab").style.display = "block";
+
+            document
+            .getElementById(
+                "vocabTab"
+            )
+            .style.display =
+            "block";
+
             renderVocabCard();
+
         }
 
         if(tab === "kanji"){
-            document.getElementById("kanjiTab").style.display = "block";
+
+            document
+            .getElementById(
+                "kanjiTab"
+            )
+            .style.display =
+            "block";
+
             renderKanjiCard();
+
+        }
+
+        if(tab === "favorite"){
+
+            favoriteTab.style.display =
+            "block";
+
+            if(
+                typeof renderFavoriteTab
+                === "function"
+            ){
+                renderFavoriteTab();
+            }
+
         }
 
         if(tab === "quiz"){
 
-            if(quizTab){
-                quizTab.style.display = "block";
-            }
+            quizTab.style.display =
+            "block";
 
-            if(typeof renderQuiz === "function"){
+            if(
+                typeof renderQuiz
+                === "function"
+            ){
                 renderQuiz();
             }
 
@@ -150,7 +232,8 @@ document
 // GRAMMAR
 // ======================
 
-document.getElementById("grammarPrev")
+document
+.getElementById("grammarPrev")
 .addEventListener("click", () => {
 
     grammarIndex--;
@@ -165,7 +248,8 @@ document.getElementById("grammarPrev")
 
 });
 
-document.getElementById("grammarNext")
+document
+.getElementById("grammarNext")
 .addEventListener("click", () => {
 
     grammarIndex++;
@@ -179,7 +263,8 @@ document.getElementById("grammarNext")
 
 });
 
-document.getElementById("grammarRandom")
+document
+.getElementById("grammarRandom")
 .addEventListener("click", () => {
 
     grammarIndex =
@@ -197,7 +282,8 @@ document.getElementById("grammarRandom")
 // VOCAB
 // ======================
 
-document.getElementById("vocabPrev")
+document
+.getElementById("vocabPrev")
 .addEventListener("click", () => {
 
     vocabIndex--;
@@ -206,12 +292,14 @@ document.getElementById("vocabPrev")
         vocabIndex =
         VOCAB_DATA.length - 1;
     }
-    resetKanjiStudy();
-    renderKanjiCard();
+
+    resetVocabStudy();
+    renderVocabCard();
 
 });
 
-document.getElementById("vocabNext")
+document
+.getElementById("vocabNext")
 .addEventListener("click", () => {
 
     vocabIndex++;
@@ -220,12 +308,13 @@ document.getElementById("vocabNext")
         vocabIndex = 0;
     }
 
-    resetKanjiStudy();
-    renderKanjiCard();
+    resetVocabStudy();
+    renderVocabCard();
 
 });
 
-document.getElementById("vocabRandom")
+document
+.getElementById("vocabRandom")
 .addEventListener("click", () => {
 
     vocabIndex =
@@ -234,8 +323,8 @@ document.getElementById("vocabRandom")
         VOCAB_DATA.length
     );
 
-    resetKanjiStudy();
-    renderKanjiCard();
+    resetVocabStudy();
+    renderVocabCard();
 
 });
 
@@ -243,7 +332,8 @@ document.getElementById("vocabRandom")
 // KANJI
 // ======================
 
-document.getElementById("kanjiPrev")
+document
+.getElementById("kanjiPrev")
 .addEventListener("click", () => {
 
     kanjiIndex--;
@@ -253,12 +343,13 @@ document.getElementById("kanjiPrev")
         KANJI_DATA.length - 1;
     }
 
-    resetVocabStudy();
+    resetKanjiStudy();
     renderKanjiCard();
 
 });
 
-document.getElementById("kanjiNext")
+document
+.getElementById("kanjiNext")
 .addEventListener("click", () => {
 
     kanjiIndex++;
@@ -267,12 +358,13 @@ document.getElementById("kanjiNext")
         kanjiIndex = 0;
     }
 
-    resetVocabStudy();
+    resetKanjiStudy();
     renderKanjiCard();
 
 });
 
-document.getElementById("kanjiRandom")
+document
+.getElementById("kanjiRandom")
 .addEventListener("click", () => {
 
     kanjiIndex =
@@ -281,7 +373,7 @@ document.getElementById("kanjiRandom")
         KANJI_DATA.length
     );
 
-    resetVocabStudy();
+    resetKanjiStudy();
     renderKanjiCard();
 
 });

@@ -182,3 +182,134 @@ main{
     color:white;
     cursor:pointer;
 }
+
+/* =========================
+   Favorite UI
+========================= */
+
+.favorite-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.favorite-filter{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.favorite-filter button{
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    padding:10px 14px;
+    cursor:pointer;
+}
+
+.active-filter{
+    background:#1d4ed8 !important;
+    font-weight:bold;
+}
+
+.delete-all-btn{
+    border:none;
+    background:#dc2626;
+    color:white;
+    border-radius:8px;
+    padding:10px 14px;
+    cursor:pointer;
+}
+
+.delete-all-btn:hover{
+    background:#b91c1c;
+}
+
+@media (max-width:768px){
+
+    .favorite-header{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .delete-all-btn{
+        width:100%;
+        min-height:44px;
+    }
+
+    .favorite-filter{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+
+    .favorite-filter button{
+        width:100%;
+        min-height:44px;
+    }
+
+}
+
+/* V8.1 Dashboard Redesign */
+
+.progress-bar{
+    width:100%;
+    height:16px;
+    background:#e5e7eb;
+    border-radius:999px;
+    margin-top:15px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:#2563eb;
+    border-radius:999px;
+}
+
+.progress-text{
+    margin-top:8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.stat-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.stat-card{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+}
+
+.stat-card strong{
+    display:block;
+    margin-top:8px;
+    color:#2563eb;
+}
+
+@media (max-width:768px){
+
+    .stat-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+/* V8.2 Premium Dashboard */
+.hero-day{font-size:38px;font-weight:700;margin-bottom:15px}
+.stat-card{box-shadow:0 4px 12px rgba(0,0,0,.06);border-radius:16px}
+.stat-icon{font-size:24px}.stat-title{margin-top:8px;font-weight:700}
+.stat-value{font-size:32px;font-weight:800;color:#2563eb;margin-top:10px}
+.stat-desc{margin-top:8px;color:#666;font-size:13px}
+.stat-next{margin-top:8px;color:#2563eb;font-weight:700}
+@media(max-width:768px){.hero-day{font-size:28px}.stat-value{font-size:26px}}
