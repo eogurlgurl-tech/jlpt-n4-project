@@ -16,6 +16,58 @@ let grammarIndex = 0;
 let vocabIndex = 0;
 let kanjiIndex = 0;
 
+const STREAK_KEY = "jlpt_streak";
+
+function getStreakData(){
+    return JSON.parse(localStorage.getItem(STREAK_KEY)) || {
+        streak:0,
+        bestStreak:0,
+        lastStudyDate:null
+    };
+}
+
+function updateStreak(){
+    const today = new Date().toISOString().split("T")[0];
+    const data = getStreakData();
+
+    if(data.lastStudyDate === today){
+        return data;
+    }
+
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate()-1);
+    const ymd = yesterday.toISOString().split("T")[0];
+
+    if(data.lastStudyDate === ymd){
+        data.streak += 1;
+    }else{
+        data.streak = 1;
+    }
+
+    data.bestStreak = Math.max(data.bestStreak, data.streak);
+    data.lastStudyDate = today;
+
+    localStorage.setItem(STREAK_KEY, JSON.stringify(data));
+    return data;
+}
+
+
+
+const QUIZ_STATS_KEY = "jlpt_quiz_stats";
+
+function getQuizStats(){
+    return JSON.parse(localStorage.getItem(QUIZ_STATS_KEY)) || {
+        total:0,
+        correct:0,
+        wrong:0
+    };
+}
+
+function saveQuizStats(stats){
+    localStorage.setItem(QUIZ_STATS_KEY, JSON.stringify(stats));
+}
+
+
 function saveData() {
 
     localStorage.setItem(
@@ -82,6 +134,8 @@ document
     progress.grammar += 1;
     progress.vocab += 1;
     progress.kanji += 1;
+
+    updateStreak();
 
     saveData();
 
