@@ -177,6 +177,18 @@ document
             "kanjiTab"
         ).style.display = "none";
 
+        const achievementTab =
+        document.getElementById(
+            "achievementTab"
+        );
+
+        if(achievementTab){
+
+            achievementTab.style.display =
+            "none";
+
+        }
+
         const favoriteTab =
         document.getElementById(
             "favoriteTab"
@@ -278,6 +290,26 @@ document
 
         }
 
+        if(tab === "achievement"){
+
+            const achievementTab =
+            document.getElementById(
+                "achievementTab"
+            );
+
+            achievementTab.style.display =
+            "block";
+
+            if(
+                typeof renderAchievementTab
+                === "function"
+            ){
+
+                renderAchievementTab();
+
+            }
+
+        }
     });
 
 });
