@@ -139,6 +139,13 @@ document
 
     saveData();
 
+    if(
+        typeof checkAchievements
+        === "function"
+    ){
+        checkAchievements();
+    }
+
     renderDashboard();
 
     alert(
@@ -206,6 +213,16 @@ document
 
         if(quizTab){
             quizTab.style.display =
+            "none";
+        }
+
+        const reportTab =
+        document.getElementById(
+            "reportTab"
+        );
+
+        if(reportTab){
+            reportTab.style.display =
             "none";
         }
 
@@ -310,6 +327,28 @@ document
             }
 
         }
+
+        if(tab === "report"){
+
+            const reportTab =
+            document.getElementById(
+                "reportTab"
+            );
+
+            reportTab.style.display =
+            "block";
+
+            if(
+                typeof renderReportTab
+                === "function"
+            ){
+
+                renderReportTab();
+
+            }
+
+        }    
+        
     });
 
 });
