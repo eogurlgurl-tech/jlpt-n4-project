@@ -54,6 +54,14 @@
          📅 리포트
     </button>
 
+    <button class="tab-btn" data-tab="review">
+        🔄 복습
+    </button>
+
+    <button class="tab-btn" data-tab="mockexam">
+        📝 모의고사
+    </button>
+
 </nav>
 
 <main>
@@ -267,6 +275,20 @@
     </section>
 </section>
 
+<section id="reviewTab" style="display:none">
+    <section class="dashboard-card">
+        <h2>🔄 스마트 복습</h2>
+        <div id="reviewArea"></div>
+    </section>
+</section>
+
+<section id="mockexamTab" style="display:none">
+    <section class="dashboard-card">
+        <h2>📝 JLPT N4 모의고사</h2>
+        <div id="mockExamArea"></div>
+    </section>
+</section>
+
 </main>
 
 
@@ -285,7 +307,8 @@
 <script src="js/quiz-ui.js"></script>
 <script src="js/achievement.js"></script>
 <script src="js/report.js"></script>
-
+<script src="js/review.js"></script>
+<script src="js/mock-exam.js"></script>
 
 </body>
 </html>

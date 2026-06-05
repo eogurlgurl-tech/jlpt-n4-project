@@ -55,6 +55,7 @@ function checkQuizAnswer(answer){
    quizStats.total++;
    saveQuizStats(quizStats);
    saveWrongAnswer({id:"wrong-"+Date.now(),type:"문법",title:quizCurrent.title,meaning:quizCurrent.meaning});
+   if(typeof addReviewItem==="function"){ addReviewItem("review-"+quizCurrent.title,quizCurrent.title);}
    result.innerHTML=`<p>❌ 오답</p><p>정답 : ${quizCurrent.meaning}</p><button class="reading-btn" onclick="renderQuiz()">다음 문제</button>`;
  }
 }

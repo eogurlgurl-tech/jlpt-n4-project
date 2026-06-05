@@ -226,6 +226,26 @@ document
             "none";
         }
 
+        const reviewTab =
+        document.getElementById(
+            "reviewTab"
+        );
+
+        if(reviewTab){
+            reviewTab.style.display =
+            "none";
+        }
+
+        const mockexamTab =
+        document.getElementById(
+            "mockexamTab"
+        );
+
+        if(mockexamTab){
+            mockexamTab.style.display =
+            "none";
+        }
+
         const tab =
         btn.dataset.tab;
 
@@ -349,6 +369,61 @@ document
 
         }    
         
+        if(tab === "review"){
+
+            const reviewTab =
+            document.getElementById(
+                "reviewTab"
+            );
+
+            reviewTab.style.display =
+            "block";
+
+            if(
+                typeof renderReviewTab
+                === "function"
+            ){
+
+                renderReviewTab();
+
+            }
+
+        }
+
+        if(tab === "mockexam"){
+
+            const mockexamTab =
+            document.getElementById(
+                "mockexamTab"
+            );
+
+            mockexamTab.style.display =
+            "block";
+
+            const target =
+            document.getElementById(
+                "mockExamArea"
+            );
+
+            if(
+                target &&
+                target.innerHTML.trim()
+                === ""
+            ){
+
+                if(
+                    typeof renderMockExam
+                    === "function"
+                ){
+
+                    renderMockExam();
+
+                }
+
+            }
+
+        }
+
     });
 
 });
