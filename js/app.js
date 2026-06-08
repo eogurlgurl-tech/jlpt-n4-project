@@ -367,7 +367,28 @@ document
 
             }
 
-        }    
+        } 
+        
+        if(tab === "weakness"){
+
+            const weaknessTab =
+            document.getElementById(
+                "weaknessTab"
+            );
+
+            weaknessTab.style.display =
+            "block";
+
+            if(
+                typeof renderWeaknessTab
+                === "function"
+            ){
+
+                renderWeaknessTab();
+
+            }
+
+        }
         
         if(tab === "review"){
 

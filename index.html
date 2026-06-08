@@ -1,314 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>JLPT N4 합격 프로젝트</title>
+    <title>JLPT N4 합격 프로젝트</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
+  <body>
+    <header class="header">
+      <h1>JLPT N4 합격 프로젝트</h1>
 
-<body>
+      <p>180일 완주 목표</p>
+    </header>
 
-<header class="header">
+    <nav class="main-nav">
+      <button class="tab-btn active" data-tab="dashboard">대시보드</button>
 
-    <h1>JLPT N4 합격 프로젝트</h1>
+      <button class="tab-btn" data-tab="grammar">문법</button>
 
-    <p>180일 완주 목표</p>
+      <button class="tab-btn" data-tab="vocab">단어</button>
 
-</header>
+      <button class="tab-btn" data-tab="kanji">한자</button>
 
-<nav class="main-nav">
+      <button class="tab-btn" data-tab="favorite">오답노트</button>
 
-    <button class="tab-btn active" data-tab="dashboard">
-        대시보드
-    </button>
+      <button class="tab-btn" data-tab="quiz">📝 퀴즈</button>
 
-    <button class="tab-btn" data-tab="grammar">
-        문법
-    </button>
+      <button class="tab-btn" data-tab="achievement">🏅 업적</button>
 
-    <button class="tab-btn" data-tab="vocab">
-        단어
-    </button>
+      <button class="tab-btn" data-tab="report">📅 리포트</button>
 
-    <button class="tab-btn" data-tab="kanji">
-        한자
-    </button>
+      <button class="tab-btn" data-tab="review">🔄 복습</button>
 
-    <button class="tab-btn" data-tab="favorite">
-        오답노트
-    </button>
+      <button class="tab-btn" data-tab="mockexam">📝 모의고사</button>
 
-    <button class="tab-btn" data-tab="quiz">
-        📝 퀴즈
-    </button>
+      <button class="tab-btn" data-tab="weakness">📚 약점집중</button>
+    </nav>
 
-    <button class="tab-btn" data-tab="achievement">
-         🏅 업적
-    </button>
+    <main>
+      <!-- DASHBOARD -->
 
-    <button class="tab-btn" data-tab="report">
-         📅 리포트
-    </button>
+      <section id="dashboardTab">
+        <section class="dashboard-card">
+          <h2>DAY 진행률</h2>
 
-    <button class="tab-btn" data-tab="review">
-        🔄 복습
-    </button>
+          <div id="dayCounter">DAY 1 / 180</div>
+        </section>
 
-    <button class="tab-btn" data-tab="mockexam">
-        📝 모의고사
-    </button>
+        <section class="dashboard-card">
+          <h2>오늘 학습</h2>
 
-</nav>
+          <div id="todayStudyArea"></div>
+        </section>
 
-<main>
+        <section class="dashboard-card">
+          <h2>현재 진행률</h2>
 
-<!-- DASHBOARD -->
-
-<section id="dashboardTab">
-
-    <section class="dashboard-card">
-
-        <h2>DAY 진행률</h2>
-
-        <div id="dayCounter">
-            DAY 1 / 180
-        </div>
-
-    </section>
-
-    <section class="dashboard-card">
-
-        <h2>오늘 학습</h2>
-        
-        <div id="todayStudyArea"></div>
-
-    </section>
-
-    <section class="dashboard-card">
-
-        <h2>현재 진행률</h2>
-
-        <div class="progress-item">
-
+          <div class="progress-item">
             문법
 
-            <span id="grammarProgress">
-                0%
-            </span>
+            <span id="grammarProgress"> 0% </span>
+          </div>
 
-        </div>
-
-        <div class="progress-item">
-
+          <div class="progress-item">
             단어
 
-            <span id="vocabProgress">
-                0%
-            </span>
+            <span id="vocabProgress"> 0% </span>
+          </div>
 
-        </div>
-
-        <div class="progress-item">
-
+          <div class="progress-item">
             한자
 
-            <span id="kanjiProgress">
-                0%
-            </span>
+            <span id="kanjiProgress"> 0% </span>
+          </div>
+        </section>
 
+        <section class="dashboard-card">
+          <h2>예상 합격 레벨</h2>
+
+          <div id="jlptLevel">JLPT N5 준비중</div>
+        </section>
+
+        <button id="startBtn">오늘 학습 시작</button>
+      </section>
+
+      <!-- GRAMMAR -->
+
+      <section id="grammarTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>문법 학습</h2>
+
+          <div id="grammarCard"></div>
+
+          <div class="card-nav">
+            <button id="grammarPrev">← 이전</button>
+
+            <button id="grammarRandom">🎲 랜덤</button>
+
+            <button id="grammarNext">다음 →</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- VOCAB -->
+
+      <section id="vocabTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>단어 학습</h2>
+
+          <div id="vocabCard"></div>
+
+          <div class="card-nav">
+            <button id="vocabPrev">← 이전</button>
+
+            <button id="vocabRandom">🎲 랜덤</button>
+
+            <button id="vocabNext">다음 →</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- KANJI -->
+
+      <section id="kanjiTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>한자 학습</h2>
+
+          <div id="kanjiCard"></div>
+
+          <div class="card-nav">
+            <button id="kanjiPrev">← 이전</button>
+
+            <button id="kanjiRandom">🎲 랜덤</button>
+
+            <button id="kanjiNext">다음 →</button>
+          </div>
+        </section>
+      </section>
+
+      <section id="favoriteTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>⭐ 오답노트</h2>
+          <div id="favoriteArea"></div>
+        </section>
+      </section>
+
+      <section id="quizTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>📝 문법 퀴즈</h2>
+          <div id="quizArea"></div>
+        </section>
+      </section>
+
+      <section id="achievementTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>🏅 업적</h2>
+          <div id="achievementArea"></div>
+        </section>
+      </section>
+
+      <section id="reportTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>📅 주간 리포트</h2>
+          <div id="reportArea"></div>
+        </section>
+      </section>
+
+      <section id="reviewTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>🔄 스마트 복습</h2>
+          <div id="reviewArea"></div>
+        </section>
+      </section>
+
+      <section id="mockexamTab" style="display: none">
+        <section class="dashboard-card">
+          <h2>📝 JLPT N4 모의고사</h2>
+          <div id="mockExamArea"></div>
+        </section>
+      </section>
+
+      <section id="weaknessTab" style="display: none">
+        <div class="dashboard-card">
+          <h2>📚 약점 집중 학습</h2>
+          <div id="weaknessArea"></div>
         </div>
-
-    </section>
-
-    <section class="dashboard-card">
-
-        <h2>예상 합격 레벨</h2>
-
-        <div id="jlptLevel">
-
-            JLPT N5 준비중
-
-        </div>
-
-    </section>
-
-    <button id="startBtn">
-
-        오늘 학습 시작
-
-    </button>
-
-</section>
-
-<!-- GRAMMAR -->
-
-<section id="grammarTab" style="display:none">
-
-    <section class="dashboard-card">
-
-        <h2>문법 학습</h2>
-
-        <div id="grammarCard">
-
-        </div>
-
-        <div class="card-nav">
-
-            <button id="grammarPrev">
-                ← 이전
-            </button>
-
-            <button id="grammarRandom">
-                🎲 랜덤
-            </button>
-
-            <button id="grammarNext">
-                다음 →
-            </button>
-
-        </div>
-
-    </section>
-
-</section>
-
-<!-- VOCAB -->
-
-<section id="vocabTab" style="display:none">
-
-    <section class="dashboard-card">
-
-        <h2>단어 학습</h2>
-
-        <div id="vocabCard">
-
-        </div>
-
-        <div class="card-nav">
-
-            <button id="vocabPrev">
-                ← 이전
-            </button>
-
-            <button id="vocabRandom">
-                🎲 랜덤
-            </button>
-
-            <button id="vocabNext">
-                다음 →
-            </button>
-
-        </div>
-
-    </section>
-
-</section>
-
-<!-- KANJI -->
-
-<section id="kanjiTab" style="display:none">
-
-    <section class="dashboard-card">
-
-        <h2>한자 학습</h2>
-
-        <div id="kanjiCard">
-
-        </div>
-
-        <div class="card-nav">
-
-            <button id="kanjiPrev">
-                ← 이전
-            </button>
-
-            <button id="kanjiRandom">
-                🎲 랜덤
-            </button>
-
-            <button id="kanjiNext">
-                다음 →
-            </button>
-
-        </div>
-
-    </section>
-
-</section>
-
-<section id="favoriteTab" style="display:none">
-
-    <section class="dashboard-card">
-
-        <h2>⭐ 오답노트</h2>
-
-        <div id="favoriteArea">
-
-        </div>
-
-    </section>
-
-</section>
-
-<section id="quizTab" style="display:none">
-    <section class="dashboard-card">
-        <h2>📝 문법 퀴즈</h2>
-        <div id="quizArea"></div>
-    </section>
-</section>
-
-<section id="achievementTab" style="display:none">
-    <section class="dashboard-card">
-        <h2>🏅 업적</h2>
-        <div id="achievementArea"></div>
-    </section>
-</section>
-
-<section id="reportTab" style="display:none">
-    <section class="dashboard-card">
-        <h2>📅 주간 리포트</h2>
-        <div id="reportArea"></div>
-    </section>
-</section>
-
-<section id="reviewTab" style="display:none">
-    <section class="dashboard-card">
-        <h2>🔄 스마트 복습</h2>
-        <div id="reviewArea"></div>
-    </section>
-</section>
-
-<section id="mockexamTab" style="display:none">
-    <section class="dashboard-card">
-        <h2>📝 JLPT N4 모의고사</h2>
-        <div id="mockExamArea"></div>
-    </section>
-</section>
-
-</main>
-
-
-<script src="js/grammar.js"></script>
-<script src="js/vocab.js"></script>
-<script src="js/kanji.js"></script>
-
-<script src="js/study-engine.js"></script>
-
-<script src="js/dashboard-ui.js"></script>
-<script src="js/grammar-ui.js"></script>
-<script src="js/vocab-ui.js"></script>
-<script src="js/kanji-ui.js"></script>
-<script src="js/favorite-ui.js"></script>
-<script src="js/app.js"></script>
-<script src="js/quiz-ui.js"></script>
-<script src="js/achievement.js"></script>
-<script src="js/report.js"></script>
-<script src="js/review.js"></script>
-<script src="js/mock-exam.js"></script>
-
-</body>
+      </section>
+    </main>
+
+    <script src="js/grammar.js"></script>
+    <script src="js/vocab.js"></script>
+    <script src="js/kanji.js"></script>
+
+    <script src="js/study-engine.js"></script>
+
+    <script src="js/dashboard-ui.js"></script>
+    <script src="js/grammar-ui.js"></script>
+    <script src="js/vocab-ui.js"></script>
+    <script src="js/kanji-ui.js"></script>
+    <script src="js/favorite-ui.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/quiz-ui.js"></script>
+    <script src="js/achievement.js"></script>
+    <script src="js/report.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/question-bank.js"></script>
+    <script src="js/question-bank-v2.js"></script>
+    <script src="js/mock-exam.js"></script>
+    <script src="js/weakness.js"></script>
+    <script src="js/weakness-quiz.js"></script>
+  </body>
 </html>
