@@ -8,7 +8,7 @@ let weaknessQuizScore = 0;
 function startWeaknessQuiz(grammarTitle) {
 
     weaknessQuizQuestions =
-    QUESTION_BANK_V2
+    QUESTION_BANK
     .filter(
         q => q.grammar === grammarTitle
     )

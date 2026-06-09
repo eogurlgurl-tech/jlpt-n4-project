@@ -29,9 +29,9 @@ let examTime = 1200;
 let timerInterval = null;
 
 function startMockExam() {
-  mockQuestions = [...QUESTION_BANK_V2]
+  mockQuestions = [...QUESTION_BANK]
     .sort(() => Math.random() - 0.5)
-    .slice(0, Math.min(20, QUESTION_BANK_V2.length));
+    .slice(0, Math.min(20, QUESTION_BANK.length));
 
   mockAnswers = {};
   mockChoices = {};

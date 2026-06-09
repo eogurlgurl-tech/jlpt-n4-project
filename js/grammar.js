@@ -1,6 +1,8 @@
 const GRAMMAR_DATA = [
 
 {
+id:"GRAMMAR-0001",
+level:"N4",
 title:"～たい",
 meaning:"~하고 싶다",
 example:"日本へ行きたいです。",
@@ -10,6 +12,8 @@ korean:"일본에 가고 싶습니다."
 },
 
 {
+id:"GRAMMAR-0002",
+level:"N4",
 title:"～なければなりません",
 meaning:"~해야 합니다",
 example:"勉強しなければなりません。",
@@ -19,6 +23,8 @@ korean:"공부해야 합니다."
 },
 
 {
+id:"GRAMMAR-0003",
+level:"N4",
 title:"～てもいいです",
 meaning:"~해도 됩니다",
 example:"入ってもいいです。",
@@ -28,6 +34,8 @@ korean:"들어가도 됩니다."
 },
 
 {
+id:"GRAMMAR-0004",
+level:"N4",
 title:"～てはいけません",
 meaning:"~하면 안 됩니다",
 example:"ここで食べてはいけません。",
@@ -37,6 +45,8 @@ korean:"여기서 먹으면 안 됩니다."
 },
 
 {
+id:"GRAMMAR-0005",
+level:"N4",
 title:"～ことができます",
 meaning:"~할 수 있습니다",
 example:"日本語を話すことができます。",
@@ -46,6 +56,8 @@ korean:"일본어를 말할 수 있습니다."
 },
 
 {
+id:"GRAMMAR-0006",
+level:"N4",
 title:"～つもりです",
 meaning:"~할 생각입니다",
 example:"日本へ行くつもりです。",
@@ -55,6 +67,8 @@ korean:"일본에 갈 생각입니다."
 },
 
 {
+id:"GRAMMAR-0007",
+level:"N4",
 title:"～ながら",
 meaning:"~하면서",
 example:"音楽を聞きながら勉強します。",
@@ -64,6 +78,8 @@ korean:"음악을 들으면서 공부합니다."
 },
 
 {
+id:"GRAMMAR-0008",
+level:"N4",
 title:"～たり～たりします",
 meaning:"~하기도 하고 ~하기도 합니다",
 example:"土曜日は映画を見たり買い物したりします。",
@@ -73,6 +89,8 @@ korean:"토요일에는 영화를 보기도 하고 쇼핑도 합니다."
 },
 
 {
+id:"GRAMMAR-0009",
+level:"N4",
 title:"～たことがあります",
 meaning:"~한 적이 있습니다",
 example:"日本へ行ったことがあります。",
@@ -82,6 +100,8 @@ korean:"일본에 가본 적이 있습니다."
 },
 
 {
+id:"GRAMMAR-0010",
+level:"N4",
 title:"～ほうがいいです",
 meaning:"~하는 편이 좋습니다",
 example:"早く寝たほうがいいです。",
@@ -91,6 +111,8 @@ korean:"빨리 자는 것이 좋습니다."
 },
 
 {
+id:"GRAMMAR-0011",
+level:"N4",
 title:"～と思います",
 meaning:"~라고 생각합니다",
 example:"それはいいと思います。",
@@ -100,6 +122,8 @@ korean:"그것은 좋다고 생각합니다."
 },
 
 {
+id:"GRAMMAR-0012",
+level:"N4",
 title:"～かもしれません",
 meaning:"~일지도 모릅니다",
 example:"明日は雨かもしれません。",
@@ -109,6 +133,8 @@ korean:"내일은 비가 올지도 모릅니다."
 },
 
 {
+id:"GRAMMAR-0013",
+level:"N4",
 title:"～でしょう",
 meaning:"~겠지요",
 example:"明日は暑いでしょう。",
@@ -118,6 +144,8 @@ korean:"내일은 덥겠지요."
 },
 
 {
+id:"GRAMMAR-0014",
+level:"N4",
 title:"～前に",
 meaning:"~하기 전에",
 example:"寝る前に勉強します。",
@@ -127,6 +155,8 @@ korean:"자기 전에 공부합니다."
 },
 
 {
+id:"GRAMMAR-0015",
+level:"N4",
 title:"～後で",
 meaning:"~한 후에",
 example:"食事の後で散歩します。",
@@ -136,6 +166,8 @@ korean:"식사 후 산책합니다."
 },
 
 {
+id:"GRAMMAR-0016",
+level:"N4",
 title:"～やすい",
 meaning:"~하기 쉽다",
 example:"この本は読みやすいです。",
@@ -145,6 +177,8 @@ korean:"이 책은 읽기 쉽습니다."
 },
 
 {
+id:"GRAMMAR-0017",
+level:"N4",
 title:"～にくい",
 meaning:"~하기 어렵다",
 example:"この字は読みにくいです。",
@@ -154,6 +188,8 @@ korean:"이 글자는 읽기 어렵습니다."
 },
 
 {
+id:"GRAMMAR-0018",
+level:"N4",
 title:"～そうです",
 meaning:"~할 것 같다",
 example:"雨が降りそうです。",
@@ -163,6 +199,8 @@ korean:"비가 올 것 같습니다."
 },
 
 {
+id:"GRAMMAR-0019",
+level:"N4",
 title:"～てしまいました",
 meaning:"~해 버렸습니다",
 example:"宿題を忘れてしまいました。",
@@ -172,6 +210,8 @@ korean:"숙제를 잊어버렸습니다."
 },
 
 {
+id:"GRAMMAR-0020",
+level:"N4",
 title:"～ようと思います",
 meaning:"~하려고 생각합니다",
 example:"日本語を勉強しようと思います。",
@@ -181,6 +221,8 @@ korean:"일본어를 공부하려고 생각합니다."
 },
 
 {
+id:"GRAMMAR-0021",
+level:"N4",
 title:"～ために",
 meaning:"~하기 위해",
 example:"日本へ行くために勉強します。",
@@ -190,6 +232,8 @@ korean:"일본에 가기 위해 공부합니다."
 },
 
 {
+id:"GRAMMAR-0022",
+level:"N4",
 title:"～ので",
 meaning:"~이므로",
 example:"雨なので行きません。",
@@ -199,6 +243,8 @@ korean:"비가 와서 가지 않습니다."
 },
 
 {
+id:"GRAMMAR-0023",
+level:"N4",
 title:"～のに",
 meaning:"~인데도",
 example:"勉強したのに忘れました。",
@@ -208,6 +254,8 @@ korean:"공부했는데도 잊어버렸습니다."
 },
 
 {
+id:"GRAMMAR-0024",
+level:"N4",
 title:"～しか～ない",
 meaning:"~밖에 없다",
 example:"100円しかありません。",
@@ -217,6 +265,8 @@ korean:"100엔밖에 없습니다."
 },
 
 {
+id:"GRAMMAR-0025",
+level:"N4",
 title:"～ば",
 meaning:"~하면",
 example:"時間があれば行きます。",
@@ -226,6 +276,8 @@ korean:"시간이 있으면 갑니다."
 },
 
 {
+id:"GRAMMAR-0026",
+level:"N4",
 title:"～なら",
 meaning:"~라면",
 example:"行くなら早く行きましょう。",
@@ -235,6 +287,8 @@ korean:"갈 거라면 빨리 갑시다."
 },
 
 {
+id:"GRAMMAR-0027",
+level:"N4",
 title:"～ても",
 meaning:"~해도",
 example:"遅れても大丈夫です。",
@@ -244,6 +298,8 @@ korean:"늦어도 괜찮습니다."
 },
 
 {
+id:"GRAMMAR-0028",
+level:"N4",
 title:"～ように",
 meaning:"~하도록",
 example:"忘れないように書きます。",
@@ -253,6 +309,8 @@ korean:"잊지 않도록 적습니다."
 },
 
 {
+id:"GRAMMAR-0029",
+level:"N4",
 title:"～ことになる",
 meaning:"~하게 되다",
 example:"来月日本へ行くことになりました。",
@@ -262,6 +320,8 @@ korean:"다음 달 일본에 가게 되었습니다."
 },
 
 {
+id:"GRAMMAR-0030",
+level:"N4",
 title:"～ことにする",
 meaning:"~하기로 하다",
 example:"毎日勉強することにします。",
