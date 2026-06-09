@@ -1,561 +1,733 @@
-/*
-FILE: question-bank-v3.js
-VERSION: V11.1-B
-PURPOSE: JLPT N4 QUESTION BANK V3 (001~050)
-UTF-8
-*/
+// question-bank-v3.js
+// Generated Final Build
 
 const QUESTION_BANK_V3 = [
+
 {
-  id:"V3-001",
-  grammar:"ながら",
-  category:"grammar",
-  question:"問題1: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 1번 한국어 해설",
-  reading:"もんだい1",
-  koreanReading:"몬다이 1"
+    id:"V3-001",
+    type:"jlpt",
+    grammar:"～ために",
+    question:"日本で働く（　　　）、毎日日本語を勉強しています。",
+    choices:["ために","ので","のに","ながら"],
+    answer:"ために",
+    korean:"일본에서 일하기 위해 매일 일본어를 공부하고 있습니다."
 },
+
 {
-  id:"V3-002",
-  grammar:"予定",
-  category:"grammar",
-  question:"問題2: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 2번 한국어 해설",
-  reading:"もんだい2",
-  koreanReading:"몬다이 2"
+    id:"V3-002",
+    type:"jlpt",
+    grammar:"～ように",
+    question:"漢字を忘れない（　　　）、毎日ノートに書いています。",
+    choices:["ために","ので","ように","のに"],
+    answer:"ように",
+    korean:"한자를 잊지 않도록 매일 공책에 적고 있습니다."
 },
+
 {
-  id:"V3-003",
-  grammar:"なければならない",
-  category:"grammar",
-  question:"問題3: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 3번 한국어 해설",
-  reading:"もんだい3",
-  koreanReading:"몬다이 3"
+    id:"V3-003",
+    type:"jlpt",
+    grammar:"～ようになる",
+    question:"毎日練習して、日本語が話せる（　　　）。",
+    choices:["そうです","つもりです","ようになりました","ためです"],
+    answer:"ようになりました",
+    korean:"매일 연습해서 일본어를 말할 수 있게 되었습니다."
 },
+
 {
-  id:"V3-004",
-  grammar:"ても",
-  category:"grammar",
-  question:"問題4: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 4번 한국어 해설",
-  reading:"もんだい4",
-  koreanReading:"몬다이 4"
+    id:"V3-004",
+    type:"jlpt",
+    grammar:"～つもり",
+    question:"来年、日本へ留学する（　　　）です。",
+    choices:["予定","よう","つもり","ため"],
+    answer:"つもり",
+    korean:"내년에 일본으로 유학할 생각입니다."
 },
+
 {
-  id:"V3-005",
-  grammar:"そうだ",
-  category:"grammar",
-  question:"問題5: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 5번 한국어 해설",
-  reading:"もんだい5",
-  koreanReading:"몬다이 5"
+    id:"V3-005",
+    type:"jlpt",
+    grammar:"～予定",
+    question:"来週、友だちと京都へ行く（　　　）です。",
+    choices:["そう","つもり","予定","よう"],
+    answer:"予定",
+    korean:"다음 주 친구와 교토에 갈 예정입니다."
 },
+
 {
-  id:"V3-006",
-  grammar:"たことがある",
-  category:"grammar",
-  question:"問題6: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 6번 한국어 해설",
-  reading:"もんだい6",
-  koreanReading:"몬다이 6"
+    id:"V3-006",
+    type:"jlpt",
+    grammar:"～なければならない",
+    question:"明日は試験なので、今日は勉強し（　　　）。",
+    choices:[
+        "なくてもいいです",
+        "なければなりません",
+        "そうです",
+        "かもしれません"
+    ],
+    answer:"なければなりません",
+    korean:"내일 시험이므로 오늘은 공부해야 합니다."
 },
+
 {
-  id:"V3-007",
-  grammar:"ほうがいい",
-  category:"grammar",
-  question:"問題7: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 7번 한국어 해설",
-  reading:"もんだい7",
-  koreanReading:"몬다이 7"
+    id:"V3-007",
+    type:"jlpt",
+    grammar:"～なくてもいい",
+    question:"今日は休みなので、早く起き（　　　）。",
+    choices:[
+        "なければなりません",
+        "なくてもいいです",
+        "そうです",
+        "たいです"
+    ],
+    answer:"なくてもいいです",
+    korean:"오늘은 쉬는 날이므로 일찍 일어나지 않아도 됩니다."
 },
+
 {
-  id:"V3-008",
-  grammar:"ようになる",
-  category:"grammar",
-  question:"問題8: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 8번 한국어 해설",
-  reading:"もんだい8",
-  koreanReading:"몬다이 8"
+    id:"V3-008",
+    type:"jlpt",
+    grammar:"～てしまう",
+    question:"大切なかばんを電車の中に忘れ（　　　）。",
+    choices:[
+        "てみました",
+        "ておきました",
+        "てしまいました",
+        "ています"
+    ],
+    answer:"てしまいました",
+    korean:"소중한 가방을 전철 안에 두고 내리고 말았습니다."
 },
+
 {
-  id:"V3-009",
-  grammar:"ために",
-  category:"grammar",
-  question:"問題9: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 9번 한국어 해설",
-  reading:"もんだい9",
-  koreanReading:"몬다이 9"
+    id:"V3-009",
+    type:"jlpt",
+    grammar:"～てみる",
+    question:"この料理は有名なので、一度食べ（　　　）。",
+    choices:[
+        "てしまいたい",
+        "ておく",
+        "てみたい",
+        "てある"
+    ],
+    answer:"てみたい",
+    korean:"이 요리는 유명하므로 한 번 먹어 보고 싶습니다."
 },
+
 {
-  id:"V3-010",
-  grammar:"しか～ない",
-  category:"grammar",
-  question:"問題10: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 10번 한국어 해설",
-  reading:"もんだい10",
-  koreanReading:"몬다이 10"
+    id:"V3-010",
+    type:"jlpt",
+    grammar:"～ておく",
+    question:"旅行の前に、ホテルを予約し（　　　）。",
+    choices:[
+        "てみます",
+        "てあります",
+        "ておきます",
+        "てしまいます"
+    ],
+    answer:"ておきます",
+    korean:"여행 전에 호텔을 예약해 둡니다."
 },
+
 {
-  id:"V3-011",
-  grammar:"ながら",
-  category:"grammar",
-  question:"問題11: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 11번 한국어 해설",
-  reading:"もんだい11",
-  koreanReading:"몬다이 11"
+    id:"V3-011",
+    type:"jlpt",
+    grammar:"～ながら",
+    question:"私は音楽を聞き（　　　）勉強します。",
+    choices:[
+        "ので",
+        "のに",
+        "ながら",
+        "ために"
+    ],
+    answer:"ながら",
+    korean:"저는 음악을 들으면서 공부합니다."
 },
+
 {
-  id:"V3-012",
-  grammar:"予定",
-  category:"grammar",
-  question:"問題12: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 12번 한국어 해설",
-  reading:"もんだい12",
-  koreanReading:"몬다이 12"
+    id:"V3-012",
+    type:"jlpt",
+    grammar:"～ので",
+    question:"雨が降っている（　　　）、今日は出かけません。",
+    choices:[
+        "ので",
+        "のに",
+        "ながら",
+        "ために"
+    ],
+    answer:"ので",
+    korean:"비가 오고 있어서 오늘은 외출하지 않습니다."
 },
+
 {
-  id:"V3-013",
-  grammar:"なければならない",
-  category:"grammar",
-  question:"問題13: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 13번 한국어 해설",
-  reading:"もんだい13",
-  koreanReading:"몬다이 13"
+    id:"V3-013",
+    type:"jlpt",
+    grammar:"～のに",
+    question:"たくさん勉強した（　　　）、試験に合格できませんでした。",
+    choices:[
+        "ので",
+        "ために",
+        "ながら",
+        "のに"
+    ],
+    answer:"のに",
+    korean:"많이 공부했는데도 시험에 합격하지 못했습니다."
 },
+
 {
-  id:"V3-014",
-  grammar:"ても",
-  category:"grammar",
-  question:"問題14: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 14번 한국어 해설",
-  reading:"もんだい14",
-  koreanReading:"몬다이 14"
+    id:"V3-014",
+    type:"jlpt",
+    grammar:"～かもしれない",
+    question:"空が暗いです。これから雨が降る（　　　）。",
+    choices:[
+        "でしょう",
+        "そうです",
+        "かもしれません",
+        "ためです"
+    ],
+    answer:"かもしれません",
+    korean:"하늘이 어둡습니다. 이제 비가 올지도 모릅니다."
 },
+
 {
-  id:"V3-015",
-  grammar:"そうだ",
-  category:"grammar",
-  question:"問題15: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 15번 한국어 해설",
-  reading:"もんだい15",
-  koreanReading:"몬다이 15"
+    id:"V3-015",
+    type:"jlpt",
+    grammar:"～でしょう",
+    question:"天気予報によると、明日は晴れる（　　　）。",
+    choices:[
+        "そうです",
+        "でしょう",
+        "のに",
+        "ために"
+    ],
+    answer:"でしょう",
+    korean:"일기예보에 따르면 내일은 맑을 것입니다."
 },
+
 {
-  id:"V3-016",
-  grammar:"たことがある",
-  category:"grammar",
-  question:"問題16: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 16번 한국어 해설",
-  reading:"もんだい16",
-  koreanReading:"몬다이 16"
+    id:"V3-016",
+    type:"jlpt",
+    grammar:"～そうです",
+    question:"このケーキはとてもおいし（　　　）。",
+    choices:[
+        "そうです",
+        "でしょう",
+        "ためです",
+        "のに"
+    ],
+    answer:"そうです",
+    korean:"이 케이크는 매우 맛있어 보입니다."
 },
+
 {
-  id:"V3-017",
-  grammar:"ほうがいい",
-  category:"grammar",
-  question:"問題17: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 17번 한국어 해설",
-  reading:"もんだい17",
-  koreanReading:"몬다이 17"
+    id:"V3-017",
+    type:"jlpt",
+    grammar:"～ば",
+    question:"時間があれ（　　　）、映画を見に行きます。",
+    choices:[
+        "ば",
+        "なら",
+        "ても",
+        "ので"
+    ],
+    answer:"ば",
+    korean:"시간이 있으면 영화를 보러 갑니다."
 },
+
 {
-  id:"V3-018",
-  grammar:"ようになる",
-  category:"grammar",
-  question:"問題18: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 18번 한국어 해설",
-  reading:"もんだい18",
-  koreanReading:"몬다이 18"
+    id:"V3-018",
+    type:"jlpt",
+    grammar:"～なら",
+    question:"日本へ行く（　　　）、京都もおすすめです。",
+    choices:[
+        "ば",
+        "ても",
+        "なら",
+        "ので"
+    ],
+    answer:"なら",
+    korean:"일본에 간다면 교토도 추천합니다."
 },
+
 {
-  id:"V3-019",
-  grammar:"ために",
-  category:"grammar",
-  question:"問題19: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 19번 한국어 해설",
-  reading:"もんだい19",
-  koreanReading:"몬다이 19"
+    id:"V3-019",
+    type:"jlpt",
+    grammar:"～ても",
+    question:"少し高く（　　　）、このかばんが欲しいです。",
+    choices:[
+        "ば",
+        "なら",
+        "ので",
+        "ても"
+    ],
+    answer:"ても",
+    korean:"조금 비싸더라도 이 가방을 갖고 싶습니다."
 },
+
 {
-  id:"V3-020",
-  grammar:"しか～ない",
-  category:"grammar",
-  question:"問題20: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 20번 한국어 해설",
-  reading:"もんだい20",
-  koreanReading:"몬다이 20"
+    id:"V3-020",
+    type:"jlpt",
+    grammar:"可能形",
+    question:"私は日本語で会話が（　　　）。",
+    choices:[
+        "できます",
+        "します",
+        "あります",
+        "なります"
+    ],
+    answer:"できます",
+    korean:"저는 일본어로 대화할 수 있습니다."
 },
+
 {
-  id:"V3-021",
-  grammar:"ながら",
-  category:"sentence",
-  question:"問題21: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 21번 한국어 해설",
-  reading:"もんだい21",
-  koreanReading:"몬다이 21"
+    id:"V3-021",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"田中さんは毎日日本語を勉強しているので、日本語がだんだん（　　　）なりました。",
+    choices:[
+        "上手に",
+        "上手く",
+        "上手",
+        "上手な"
+    ],
+    answer:"上手に",
+    korean:"다나카 씨는 매일 일본어를 공부해서 일본어를 점점 잘하게 되었습니다."
 },
+
 {
-  id:"V3-022",
-  grammar:"予定",
-  category:"sentence",
-  question:"問題22: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 22번 한국어 해설",
-  reading:"もんだい22",
-  koreanReading:"몬다이 22"
+    id:"V3-022",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"旅行の前にホテルを（　　　）しておきました。",
+    choices:[
+        "予約",
+        "練習",
+        "運転",
+        "説明"
+    ],
+    answer:"予約",
+    korean:"여행 전에 호텔을 예약해 두었습니다."
 },
+
 {
-  id:"V3-023",
-  grammar:"なければならない",
-  category:"sentence",
-  question:"問題23: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 23번 한국어 해설",
-  reading:"もんだい23",
-  koreanReading:"몬다이 23"
+    id:"V3-023",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"今日はとても暑いので、エアコンを（　　　）。",
+    choices:[
+        "つけました",
+        "かけました",
+        "開けました",
+        "消しました"
+    ],
+    answer:"つけました",
+    korean:"오늘은 매우 더워서 에어컨을 켰습니다."
 },
+
 {
-  id:"V3-024",
-  grammar:"ても",
-  category:"sentence",
-  question:"問題24: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 24번 한국어 해설",
-  reading:"もんだい24",
-  koreanReading:"몬다이 24"
+    id:"V3-024",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"駅で切符を買ってから電車に（　　　）。",
+    choices:[
+        "乗ります",
+        "歩きます",
+        "洗います",
+        "返します"
+    ],
+    answer:"乗ります",
+    korean:"역에서 표를 산 후 전철을 탑니다."
 },
+
 {
-  id:"V3-025",
-  grammar:"そうだ",
-  category:"sentence",
-  question:"問題25: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 25번 한국어 해설",
-  reading:"もんだい25",
-  koreanReading:"몬다이 25"
+    id:"V3-025",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"昨日は疲れていたので、宿題をしないで（　　　）。",
+    choices:[
+        "寝ました",
+        "起きました",
+        "遊びました",
+        "働きました"
+    ],
+    answer:"寝ました",
+    korean:"어제는 피곤해서 숙제를 하지 않고 잤습니다."
 },
+
 {
-  id:"V3-026",
-  grammar:"たことがある",
-  category:"sentence",
-  question:"問題26: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 26번 한국어 해설",
-  reading:"もんだい26",
-  koreanReading:"몬다이 26"
+    id:"V3-026",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"病院へ行ったら、まず受付で名前を（　　　）。",
+    choices:[
+        "書きます",
+        "借ります",
+        "閉めます",
+        "運びます"
+    ],
+    answer:"書きます",
+    korean:"병원에 가면 먼저 접수처에서 이름을 적습니다."
 },
+
 {
-  id:"V3-027",
-  grammar:"ほうがいい",
-  category:"sentence",
-  question:"問題27: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 27번 한국어 해설",
-  reading:"もんだい27",
-  koreanReading:"몬다이 27"
+    id:"V3-027",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"スーパーは駅の前にあるので、とても（　　　）です。",
+    choices:[
+        "便利",
+        "有名",
+        "丈夫",
+        "特別"
+    ],
+    answer:"便利",
+    korean:"마트가 역 앞에 있어서 매우 편리합니다."
 },
+
 {
-  id:"V3-028",
-  grammar:"ようになる",
-  category:"sentence",
-  question:"問題28: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 28번 한국어 해설",
-  reading:"もんだい28",
-  koreanReading:"몬다이 28"
+    id:"V3-028",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"友だちの誕生日なので、プレゼントを（　　　）しました。",
+    choices:[
+        "用意",
+        "練習",
+        "掃除",
+        "利用"
+    ],
+    answer:"用意",
+    korean:"친구 생일이라 선물을 준비했습니다."
 },
+
 {
-  id:"V3-029",
-  grammar:"ために",
-  category:"sentence",
-  question:"問題29: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 29번 한국어 해설",
-  reading:"もんだい29",
-  koreanReading:"몬다이 29"
+    id:"V3-029",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"来月試験があるので、毎日２時間ずつ（　　　）います。",
+    choices:[
+        "勉強して",
+        "勉強しに",
+        "勉強するで",
+        "勉強したら"
+    ],
+    answer:"勉強して",
+    korean:"다음 달 시험이 있어서 매일 2시간씩 공부하고 있습니다."
 },
+
 {
-  id:"V3-030",
-  grammar:"しか～ない",
-  category:"sentence",
-  question:"問題30: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 30번 한국어 해설",
-  reading:"もんだい30",
-  koreanReading:"몬다이 30"
+    id:"V3-030",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"この店のラーメンはおいしいので、お客さんがたくさん（　　　）。",
+    choices:[
+        "来ます",
+        "置きます",
+        "渡します",
+        "消します"
+    ],
+    answer:"来ます",
+    korean:"이 가게 라멘은 맛있어서 손님이 많이 옵니다."
 },
+
 {
-  id:"V3-031",
-  grammar:"ながら",
-  category:"sentence",
-  question:"問題31: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 31번 한국어 해설",
-  reading:"もんだい31",
-  koreanReading:"몬다이 31"
+    id:"V3-031",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"電車が遅れたので、約束の時間に（　　　）ませんでした。",
+    choices:[
+        "間に合い",
+        "始まり",
+        "終わり",
+        "集まり"
+    ],
+    answer:"間に合い",
+    korean:"전철이 늦어서 약속 시간에 맞추지 못했습니다."
 },
+
 {
-  id:"V3-032",
-  grammar:"予定",
-  category:"sentence",
-  question:"問題32: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 32번 한국어 해설",
-  reading:"もんだい32",
-  koreanReading:"몬다이 32"
+    id:"V3-032",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"この漢字の読み方がわからないので、辞書で（　　　）。",
+    choices:[
+        "調べます",
+        "集めます",
+        "借ります",
+        "送ります"
+    ],
+    answer:"調べます",
+    korean:"이 한자의 읽는 법을 몰라서 사전으로 찾아봅니다."
 },
+
 {
-  id:"V3-033",
-  grammar:"なければならない",
-  category:"sentence",
-  question:"問題33: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 33번 한국어 해설",
-  reading:"もんだい33",
-  koreanReading:"몬다이 33"
+    id:"V3-033",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"昨日買ったかばんは（　　　）ので、たくさん物が入ります。",
+    choices:[
+        "大きい",
+        "長い",
+        "高い",
+        "細い"
+    ],
+    answer:"大きい",
+    korean:"어제 산 가방은 커서 물건이 많이 들어갑니다."
 },
+
 {
-  id:"V3-034",
-  grammar:"ても",
-  category:"sentence",
-  question:"問題34: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 34번 한국어 해설",
-  reading:"もんだい34",
-  koreanReading:"몬다이 34"
+    id:"V3-034",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"日本へ旅行したとき、たくさん写真を（　　　）。",
+    choices:[
+        "撮りました",
+        "書きました",
+        "閉めました",
+        "洗いました"
+    ],
+    answer:"撮りました",
+    korean:"일본 여행 때 사진을 많이 찍었습니다."
 },
+
 {
-  id:"V3-035",
-  grammar:"そうだ",
-  category:"sentence",
-  question:"問題35: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 35번 한국어 해설",
-  reading:"もんだい35",
-  koreanReading:"몬다이 35"
+    id:"V3-035",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"空が暗いので、もうすぐ雨が（　　　）そうです。",
+    choices:[
+        "降り",
+        "作り",
+        "帰り",
+        "歩き"
+    ],
+    answer:"降り",
+    korean:"하늘이 어두워서 곧 비가 올 것 같습니다."
 },
+
 {
-  id:"V3-036",
-  grammar:"たことがある",
-  category:"sentence",
-  question:"問題36: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 36번 한국어 해설",
-  reading:"もんだい36",
-  koreanReading:"몬다이 36"
+    id:"V3-036",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"朝ごはんを食べる時間がなかったので、何も（　　　）ませんでした。",
+    choices:[
+        "食べ",
+        "飲み",
+        "買い",
+        "作り"
+    ],
+    answer:"食べ",
+    korean:"아침 식사를 할 시간이 없어서 아무것도 먹지 못했습니다."
 },
+
 {
-  id:"V3-037",
-  grammar:"ほうがいい",
-  category:"sentence",
-  question:"問題37: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 37번 한국어 해설",
-  reading:"もんだい37",
-  koreanReading:"몬다이 37"
+    id:"V3-037",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"友だちから借りた本を、今日返しに（　　　）。",
+    choices:[
+        "行きます",
+        "来ます",
+        "見ます",
+        "乗ります"
+    ],
+    answer:"行きます",
+    korean:"친구에게 빌린 책을 오늘 돌려주러 갑니다."
 },
+
 {
-  id:"V3-038",
-  grammar:"ようになる",
-  category:"sentence",
-  question:"問題38: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 38번 한국어 해설",
-  reading:"もんだい38",
-  koreanReading:"몬다이 38"
+    id:"V3-038",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"先生の話がよく聞こえなかったので、もう一度（　　　）もらいました。",
+    choices:[
+        "説明して",
+        "予約して",
+        "運転して",
+        "出発して"
+    ],
+    answer:"説明して",
+    korean:"선생님의 말을 잘 듣지 못해서 다시 한 번 설명해 달라고 했습니다."
 },
+
 {
-  id:"V3-039",
-  grammar:"ために",
-  category:"sentence",
-  question:"問題39: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 39번 한국어 해설",
-  reading:"もんだい39",
-  koreanReading:"몬다이 39"
+    id:"V3-039",
+    type:"jlpt",
+    grammar:"文脈",
+    question:"毎日運動しているので、前より体が（　　　）なりました。",
+    choices:[
+        "丈夫に",
+        "静かに",
+        "有名に",
+        "簡単に"
+    ],
+    answer:"丈夫に",
+    korean:"매일 운동해서 전보다 몸이 건강해졌습니다."
 },
+
 {
-  id:"V3-040",
-  grammar:"しか～ない",
-  category:"sentence",
-  question:"問題40: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 40번 한국어 해설",
-  reading:"もんだい40",
-  koreanReading:"몬다이 40"
+    id:"V3-040",
+    type:"jlpt",
+    grammar:"語彙",
+    question:"来週の旅行のために、新しいスーツケースを（　　　）。",
+    choices:[
+        "買いました",
+        "返しました",
+        "借りました",
+        "閉めました"
+    ],
+    answer:"買いました",
+    korean:"다음 주 여행을 위해 새 여행가방을 샀습니다."
 },
+
 {
-  id:"V3-041",
-  grammar:"ながら",
-  category:"situation",
-  question:"問題41: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 41번 한국어 해설",
-  reading:"もんだい41",
-  koreanReading:"몬다이 41"
+    id:"V3-041",
+    type:"jlpt",
+    grammar:"状況判断",
+    question:"東京駅で大阪までの切符を買いたいです。まずどこへ行きますか。",
+    choices:[
+        "切符売り場",
+        "改札口",
+        "ホーム",
+        "出口"
+    ],
+    answer:"切符売り場",
+    korean:"도쿄역에서 오사카행 표를 사고 싶습니다. 먼저 어디로 가야 합니까?"
 },
+
 {
-  id:"V3-042",
-  grammar:"予定",
-  category:"situation",
-  question:"問題42: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 42번 한국어 해설",
-  reading:"もんだい42",
-  koreanReading:"몬다이 42"
+    id:"V3-042",
+    type:"jlpt",
+    grammar:"状況判断",
+    question:"病院を予約しています。受付で最初に何と言いますか。",
+    choices:[
+        "予約しています",
+        "いただきます",
+        "ごちそうさまです",
+        "いってきます"
+    ],
+    answer:"予約しています",
+    korean:"병원을 예약했습니다. 접수처에서 가장 먼저 할 말은 무엇입니까?"
 },
+
 {
-  id:"V3-043",
-  grammar:"なければならない",
-  category:"situation",
-  question:"問題43: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 43번 한국어 해설",
-  reading:"もんだい43",
-  koreanReading:"몬다이 43"
+    id:"V3-043",
+    type:"jlpt",
+    grammar:"状況判断",
+    question:"デパートで買ったシャツのサイズが小さかったです。どうしますか。",
+    choices:[
+        "交換してもらいます",
+        "予約します",
+        "出発します",
+        "勉強します"
+    ],
+    answer:"交換してもらいます",
+    korean:"백화점에서 산 셔츠의 사이즈가 작습니다. 어떻게 해야 합니까?"
 },
+
 {
-  id:"V3-044",
-  grammar:"ても",
-  category:"situation",
-  question:"問題44: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 44번 한국어 해설",
-  reading:"もんだい44",
-  koreanReading:"몬다이 44"
+    id:"V3-044",
+    type:"jlpt",
+    grammar:"状況判断",
+    question:"友だちとの約束に遅れそうです。まず何をしますか。",
+    choices:[
+        "連絡します",
+        "昼寝します",
+        "買い物します",
+        "運動します"
+    ],
+    answer:"連絡します",
+    korean:"친구와의 약속에 늦을 것 같습니다. 먼저 무엇을 해야 합니까?"
 },
+
 {
-  id:"V3-045",
-  grammar:"そうだ",
-  category:"situation",
-  question:"問題45: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 45번 한국어 해설",
-  reading:"もんだい45",
-  koreanReading:"몬다이 45"
+    id:"V3-045",
+    type:"jlpt",
+    grammar:"状況判断",
+    question:"図書館で借りた本の返却日を過ぎてしまいました。まず何をするのがいいですか。",
+    choices:[
+        "図書館に連絡します",
+        "本を捨てます",
+        "新しい本を買います",
+        "友だちにあげます"
+    ],
+    answer:"図書館に連絡します",
+    korean:"도서관에서 빌린 책의 반납일이 지났습니다. 먼저 무엇을 하는 것이 좋습니까?"
 },
+
 {
-  id:"V3-046",
-  grammar:"たことがある",
-  category:"situation",
-  question:"問題46: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 46번 한국어 해설",
-  reading:"もんだい46",
-  koreanReading:"몬다이 46"
+    id:"V3-046",
+    type:"jlpt",
+    grammar:"読解",
+    question:"【図書館のお知らせ】\n\n今週の金曜日は館内点検のため休館します。\n土曜日は午前9時から午後6時まで利用できます。\n\n金曜日はどうですか。",
+    choices:[
+        "利用できます",
+        "午後6時まで開いています",
+        "休館です",
+        "午前9時から開きます"
+    ],
+    answer:"休館です",
+    korean:"금요일은 도서관 점검으로 휴관입니다."
 },
+
 {
-  id:"V3-047",
-  grammar:"ほうがいい",
-  category:"situation",
-  question:"問題47: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 47번 한국어 해설",
-  reading:"もんだい47",
-  koreanReading:"몬다이 47"
+    id:"V3-047",
+    type:"jlpt",
+    grammar:"読解",
+    question:"【メール】\n\n田中さんへ\n\n明日の会議は午後2時からです。\n場所は3階会議室です。\n10分前までに来てください。\n\n鈴木\n\n田中さんは何時までに行けばいいですか。",
+    choices:[
+        "午後1時50分",
+        "午後2時",
+        "午後2時10分",
+        "午後1時"
+    ],
+    answer:"午後1時50分",
+    korean:"회의 10분 전인 오후 1시 50분까지 가야 합니다."
 },
+
 {
-  id:"V3-048",
-  grammar:"ようになる",
-  category:"situation",
-  question:"問題48: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 48번 한국어 해설",
-  reading:"もんだい48",
-  koreanReading:"몬다이 48"
+    id:"V3-048",
+    type:"jlpt",
+    grammar:"読解",
+    question:"【動物園のお知らせ】\n\n毎週月曜日は休園です。\nただし、祝日の場合は開園し、次の日が休園になります。\n\n月曜日が祝日の場合はどうなりますか。",
+    choices:[
+        "月曜日も火曜日も開園",
+        "月曜日は休園、火曜日は開園",
+        "月曜日は開園、火曜日は休園",
+        "毎日開園"
+    ],
+    answer:"月曜日は開園、火曜日は休園",
+    korean:"월요일이 공휴일이면 개장하고 화요일이 휴원입니다."
 },
+
 {
-  id:"V3-049",
-  grammar:"ために",
-  category:"situation",
-  question:"問題49: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 49번 한국어 해설",
-  reading:"もんだい49",
-  koreanReading:"몬다이 49"
+    id:"V3-049",
+    type:"jlpt",
+    grammar:"情報検索",
+    question:"【電車時刻表】\n\n東京行き\n09:00\n09:30\n10:15\n11:00\n\n9時40分に駅へ来ました。次の電車は何時ですか。",
+    choices:[
+        "09:30",
+        "10:15",
+        "11:00",
+        "09:00"
+    ],
+    answer:"10:15",
+    korean:"9시 40분 이후 가장 빠른 열차는 10시 15분입니다."
 },
+
 {
-  id:"V3-050",
-  grammar:"しか～ない",
-  category:"situation",
-  question:"問題50: 適切な言葉を選びなさい。",
-  choices:["A","B","C","D"],
-  answer:"A",
-  korean:"문제 50번 한국어 해설",
-  reading:"もんだい50",
-  koreanReading:"몬다이 50"
+    id:"V3-050",
+    type:"jlpt",
+    grammar:"情報検索",
+    question:"【文化祭スケジュール】\n\n10:00 開会式\n11:00 合唱\n13:00 ダンス\n15:00 閉会式\n\nダンスは何時からですか。",
+    choices:[
+        "10:00",
+        "11:00",
+        "13:00",
+        "15:00"
+    ],
+    answer:"13:00",
+    korean:"댄스 공연은 13시에 시작합니다."
 }
+
 ];
 
 export default QUESTION_BANK_V3;
