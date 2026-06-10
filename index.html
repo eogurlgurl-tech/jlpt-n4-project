@@ -11,9 +11,15 @@
 
   <body>
     <header class="header">
-      <h1>JLPT N4 합격 프로젝트</h1>
+      <div class="header-top">
+        <div>
+          <h1>JLPT N4 MASTER ROAD</h1>
 
-      <p>180일 완주 목표</p>
+          <p>180일 합격 프로젝트</p>
+        </div>
+
+        <button id="themeToggle" class="theme-btn" title="다크모드">🌙</button>
+      </div>
     </header>
 
     <nav class="main-nav">
@@ -25,19 +31,19 @@
 
       <button class="tab-btn" data-tab="kanji">한자</button>
 
-      <button class="tab-btn" data-tab="favorite">오답노트</button>
-
       <button class="tab-btn" data-tab="quiz">📝 퀴즈</button>
-
-      <button class="tab-btn" data-tab="achievement">🏅 업적</button>
-
-      <button class="tab-btn" data-tab="report">📅 리포트</button>
-
-      <button class="tab-btn" data-tab="review">🔄 복습</button>
 
       <button class="tab-btn" data-tab="mockexam">📝 모의고사</button>
 
       <button class="tab-btn" data-tab="weakness">📚 약점집중</button>
+
+      <button class="tab-btn" data-tab="favorite">오답노트</button>
+
+      <button class="tab-btn" data-tab="review">🔄 복습</button>
+
+      <button class="tab-btn" data-tab="achievement">🏅 업적</button>
+
+      <button class="tab-btn" data-tab="report">📅 리포트</button>
     </nav>
 
     <main>
@@ -51,7 +57,8 @@
         </section>
 
         <section class="dashboard-card">
-          <h2>오늘 학습</h2>
+          <h2>🚀 오늘 학습</h2>
+          <div id="quickStartArea"></div>
 
           <div id="todayStudyArea"></div>
         </section>
