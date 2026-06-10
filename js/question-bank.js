@@ -729,5 +729,3 @@ const QUESTION_BANK = [
 }
 
 ];
-
-export default QUESTION_BANK_V3;

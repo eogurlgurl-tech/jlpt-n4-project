@@ -328,8 +328,227 @@ example:"毎日勉強することにします。",
 reading:"まいにち べんきょうすることにします",
 koreanReading:"마이니치 벤쿄스루코토니 시마스",
 korean:"매일 공부하기로 합니다."
-}
+},
 
+{
+id:"GRAMMAR-0031",
+level:"N4",
+title:"～らしい",
+meaning:"~인 것 같다 (전해 들은 정보)",
+example:"彼は日本人らしいです。",
+reading:"かれ は にほんじん らしいです",
+koreanReading:"카레 와 니혼진 라시이데스",
+korean:"그는 일본인인 것 같습니다."
+},
+
+{
+id:"GRAMMAR-0032",
+level:"N4",
+title:"～ようだ",
+meaning:"~인 것 같다",
+example:"外は寒いようです。",
+reading:"そと は さむい ようです",
+koreanReading:"소토 와 사무이 요우데스",
+korean:"밖은 추운 것 같습니다."
+},
+
+{
+id:"GRAMMAR-0033",
+level:"N4",
+title:"～みたいだ",
+meaning:"~같다",
+example:"彼は先生みたいです。",
+reading:"かれ は せんせい みたいです",
+koreanReading:"카레 와 센세이 미타이데스",
+korean:"그는 선생님 같습니다."
+},
+
+{
+id:"GRAMMAR-0034",
+level:"N4",
+title:"～ておく",
+meaning:"~해 두다",
+example:"資料を準備しておきます。",
+reading:"しりょう を じゅんびして おきます",
+koreanReading:"시료우 오 준비시테 오키마스",
+korean:"자료를 준비해 둡니다."
+},
+
+{
+id:"GRAMMAR-0035",
+level:"N4",
+title:"～てみる",
+meaning:"~해 보다",
+example:"一度食べてみます。",
+reading:"いちど たべてみます",
+koreanReading:"이치도 타베테미마스",
+korean:"한번 먹어 보겠습니다."
+},
+
+{
+id:"GRAMMAR-0036",
+level:"N4",
+title:"～始める",
+meaning:"~하기 시작하다",
+example:"勉強し始めました。",
+reading:"べんきょう しはじめました",
+koreanReading:"벤쿄우 시하지메마시타",
+korean:"공부하기 시작했습니다."
+},
+
+{
+id:"GRAMMAR-0037",
+level:"N4",
+title:"～終わる",
+meaning:"~을 끝내다",
+example:"仕事が終わりました。",
+reading:"しごと が おわりました",
+koreanReading:"시고토 가 오와리마시타",
+korean:"일이 끝났습니다."
+},
+
+{
+id:"GRAMMAR-0038",
+level:"N4",
+title:"～続ける",
+meaning:"계속 ~하다",
+example:"日本語を勉強し続けます。",
+reading:"にほんご を べんきょうしつづけます",
+koreanReading:"니혼고 오 벤쿄우시츠즈케마스",
+korean:"일본어 공부를 계속합니다."
+},
+
+{
+id:"GRAMMAR-0039",
+level:"N4",
+title:"～すぎる",
+meaning:"너무 ~하다",
+example:"食べすぎました。",
+reading:"たべすぎました",
+koreanReading:"타베스기마시타",
+korean:"너무 많이 먹었습니다."
+},
+
+{
+id:"GRAMMAR-0040",
+level:"N4",
+title:"～ばかり",
+meaning:"~만",
+example:"甘いものばかり食べます。",
+reading:"あまいもの ばかり たべます",
+koreanReading:"아마이모노 바카리 타베마스",
+korean:"단 것만 먹습니다."
+},
+
+{
+id:"GRAMMAR-0041",
+level:"N4",
+title:"～ようになる",
+meaning:"~하게 되다",
+example:"日本語が話せるようになりました。",
+reading:"にほんご が はなせるように なりました",
+koreanReading:"니혼고 가 하나세루요우니 나리마시타",
+korean:"일본어를 말할 수 있게 되었습니다."
+},
+
+{
+id:"GRAMMAR-0042",
+level:"N4",
+title:"～てくれる",
+meaning:"~해 주다",
+example:"友達が教えてくれました。",
+reading:"ともだち が おしえてくれました",
+koreanReading:"토모다치 가 오시에테쿠레마시타",
+korean:"친구가 알려주었습니다."
+},
+
+{
+id:"GRAMMAR-0043",
+level:"N4",
+title:"～てもらう",
+meaning:"~받다",
+example:"先生に教えてもらいました。",
+reading:"せんせい に おしえてもらいました",
+koreanReading:"센세이 니 오시에테모라이마시타",
+korean:"선생님께 배웠습니다."
+},
+
+{
+id:"GRAMMAR-0044",
+level:"N4",
+title:"～ていただく",
+meaning:"~받다(겸양)",
+example:"説明していただきました。",
+reading:"せつめいして いただきました",
+koreanReading:"세츠메이시테 이타다키마시타",
+korean:"설명해 주셨습니다."
+},
+
+{
+id:"GRAMMAR-0045",
+level:"N4",
+title:"～させる",
+meaning:"~하게 하다",
+example:"子供に勉強させます。",
+reading:"こども に べんきょうさせます",
+koreanReading:"코도모 니 벤쿄우사세마스",
+korean:"아이에게 공부하게 합니다."
+},
+
+{
+id:"GRAMMAR-0046",
+level:"N4",
+title:"～られる",
+meaning:"수동·가능",
+example:"日本語が話せます。",
+reading:"にほんご が はなせます",
+koreanReading:"니혼고 가 하나세마스",
+korean:"일본어를 말할 수 있습니다."
+},
+
+{
+id:"GRAMMAR-0047",
+level:"N4",
+title:"～あいだ",
+meaning:"~동안",
+example:"休みの間勉強します。",
+reading:"やすみ の あいだ べんきょうします",
+koreanReading:"야스미노 아이다 벤쿄우시마스",
+korean:"쉬는 동안 공부합니다."
+},
+
+{
+id:"GRAMMAR-0048",
+level:"N4",
+title:"～うちに",
+meaning:"~하는 사이에",
+example:"若いうちに勉強しましょう。",
+reading:"わかい うちに べんきょうしましょう",
+koreanReading:"와카이 우치니 벤쿄우시마쇼우",
+korean:"젊을 때 공부합시다."
+},
+
+{
+id:"GRAMMAR-0049",
+level:"N4",
+title:"～たばかり",
+meaning:"막 ~했다",
+example:"今帰ったばかりです。",
+reading:"いま かえったばかりです",
+koreanReading:"이마 카엣타바카리데스",
+korean:"방금 돌아왔습니다."
+},
+
+{
+id:"GRAMMAR-0050",
+level:"N4",
+title:"～によると",
+meaning:"~에 따르면",
+example:"天気予報によると雨です。",
+reading:"てんきよほう によると あめです",
+koreanReading:"텐키요호우 니요루토 아메데스",
+korean:"일기예보에 따르면 비입니다."
+}
 ];
 
 const GRAMMAR_COMPARE = {
@@ -368,6 +587,35 @@ const GRAMMAR_COMPARE = {
     compare:"～そうです",
     difference:
     "～でしょう는 추측, ～そうです는 겉보기"
-}
+},
 
+"～らしい":{
+    compare:"～ようだ",
+    difference:"～らしい는 전해들은 정보, ～ようだ는 관찰 기반 추측"
+},
+
+"～ようだ":{
+    compare:"～らしい",
+    difference:"～ようだ는 관찰 기반 추측, ～らしい는 전문·소문"
+},
+
+"～てみる":{
+    compare:"～ておく",
+    difference:"～てみる는 시도, ～ておく는 준비"
+},
+
+"～ておく":{
+    compare:"～てみる",
+    difference:"～ておく는 준비, ～てみる는 경험"
+},
+
+"～ことにする":{
+    compare:"～ことになる",
+    difference:"～ことにする는 자신의 결정"
+},
+
+"～ことになる":{
+    compare:"～ことにする",
+    difference:"～ことになる는 외부 결정"
+}
 };
