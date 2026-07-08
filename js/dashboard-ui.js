@@ -115,7 +115,7 @@ function renderDashboard() {
 
 <button
 class="quick-btn"
-onclick="showTab('vocab')">
+onclick="document.querySelector('.tab-btn[data-tab=\"vocab\"]').click()">
 
 📘 단어
 
@@ -123,7 +123,7 @@ onclick="showTab('vocab')">
 
 <button
 class="quick-btn"
-onclick="showTab('grammar')">
+onclick="document.querySelector('.tab-btn[data-tab=\"grammar\"]').click()">
 
 📗 문법
 
@@ -131,7 +131,7 @@ onclick="showTab('grammar')">
 
 <button
 class="quick-btn"
-onclick="showTab('kanji')">
+onclick="document.querySelector('.tab-btn[data-tab=\"kanji\"]').click()">
 
 🈶 한자
 
@@ -139,7 +139,7 @@ onclick="showTab('kanji')">
 
 <button
 class="quick-btn"
-onclick="showTab('mock')">
+onclick="document.querySelector('.tab-btn[data-tab=\"mockexam\"]').click()">
 
 📝 모의고사
 
