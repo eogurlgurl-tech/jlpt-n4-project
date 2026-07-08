@@ -1,10 +1,10 @@
-# PROJECT_CONTEXT.md
+# Japanese Master Road
 
-Project : Japanese Master Road
+## PROJECT_CONTEXT.md
 
-Version : 3.0.0
+Version : 3.1.0
 
-Status : Sprint 0 In Progress
+Status : Sprint 2 Ready
 
 Development Method : Sprint
 
@@ -15,82 +15,6 @@ Source of Truth
 
 ---
 
-# Vision
-
-일본어를 처음 배우는 사람도
-
-히라가나부터 JLPT N1까지
-
-하나의 플랫폼에서 학습할 수 있도록 한다.
-
-GitHub Pages에서 동작하는
-
-무료 일본어 학습 플랫폼을 구축한다.
-
----
-
-# Development Rules
-
-- 현재 프로젝트 코드를 Source of Truth로 사용한다.
-- Regression Zero.
-- One Feature = One Sprint
-- One Step = One Commit
-- Mobile First
-- 기존 기능을 깨뜨리지 않는다.
-- 필요한 기능만 추가한다.
-- 완료 후 문서를 업데이트한다.
-
----
-
-# Current Sprint
-
-Sprint 0
-
-FEATURE-000
-
-Project Foundation
-
-Status
-
-IN PROGRESS
-
----
-
-# Completed
-
-✅ Foundation Directories
-
-docs/
-
-assets/
-
-data/
-
-tests/
-
-✅ config.js
-
-✅ constants.js
-
----
-
-# Next Feature
-
-FEATURE-001
-
-Settings Syst
-
-# Japanese Master Road
-
-## PROJECT_CONTEXT.md
-
-Version : 3.0.0
-Status : Ready
-Development Method : Sprint
-Source of Truth : Current Project Code + PROJECT_CONTEXT.md
-
----
-
 # Project Vision
 
 Japanese Master Road는 단순한 JLPT N4 학습 앱이 아니다.
@@ -98,12 +22,11 @@ Japanese Master Road는 단순한 JLPT N4 학습 앱이 아니다.
 목표는
 
 "일본어를 처음 배우는 사람도
-히라가나부터 N1까지
-하나의 앱으로 학습할 수 있는 플랫폼"
-
-이다.
+히라가나부터 JLPT N1까지
+하나의 플랫폼에서 학습할 수 있도록 한다."
 
 GitHub Pages에서 동작하는
+
 무료 일본어 학습 플랫폼을 구축한다.
 
 ---
@@ -114,23 +37,23 @@ Japanese
 
 ↓
 
-히라가나
+Hiragana
 
 ↓
 
-가타카나
+Katakana
 
 ↓
 
-기초 읽기
+Basic Reading
 
 ↓
 
-기초 단어
+Basic Vocabulary
 
 ↓
 
-기초 문법
+Basic Grammar
 
 ↓
 
@@ -154,15 +77,15 @@ JLPT N1
 
 ↓
 
-독해
+Reading
 
 ↓
 
-청해
+Listening
 
 ↓
 
-회화
+Conversation
 
 ↓
 
@@ -180,37 +103,133 @@ Master
 
 단순 암기가 아닌
 
-"반복"
+- 반복
+- 복습
+- 약점 분석
+- 성취감
 
-"복습"
-
-"약점 분석"
-
-"성취감"
-
-을 중심으로 설계한다.
+중심으로 설계한다.
 
 ---
 
-# Project Rules
+# Development Rules
 
-현재 프로젝트 코드를 Source of Truth로 사용한다.
+- Current Project Code를 Source of Truth로 사용한다.
+- Regression Zero
+- Mobile First
+- PWA 유지
+- 기존 기능을 절대 깨뜨리지 않는다.
+- One Feature = One Sprint
+- One Step = One Commit
+- 필요한 기능만 추가한다.
+- 불필요한 리팩토링 금지
+- 완료 후 PROJECT_CONTEXT.md를 항상 최신 상태로 업데이트한다.
 
-기존 기능을 깨뜨리지 않는다.
+---
 
-Regression Zero.
+# Current Sprint
 
-모바일 우선(Mobile First)
+Sprint 2
 
-PC도 지원한다.
+FEATURE-002
 
-PWA 유지.
+Mobile UI Upgrade
 
-가능하면 기존 구조를 유지한다.
+Status
 
-One Feature = One Sprint
+READY
 
-하루 작업 종료 시 PROJECT_CONTEXT.md 전체 업데이트.
+---
+
+# Completed Features
+
+## Foundation
+
+✅ Foundation Directories
+
+✅ config.js
+
+✅ constants.js
+
+---
+
+## Dashboard
+
+✅ Dashboard UI
+
+✅ Premium Dashboard
+
+✅ Hero Dashboard
+
+✅ Progress Bar
+
+✅ Statistics
+
+✅ Quick Study Card
+
+---
+
+## Study
+
+✅ Grammar
+
+✅ Vocabulary
+
+✅ Kanji
+
+✅ Quiz
+
+✅ Mock Exam
+
+✅ Weakness Study
+
+✅ Review
+
+---
+
+## Management
+
+✅ Favorite
+
+✅ Achievement
+
+✅ Report
+
+---
+
+## Theme
+
+✅ Dark Mode
+
+---
+
+## PWA
+
+✅ Manifest
+
+---
+
+## FEATURE-001 Settings System
+
+Completed
+
+✅ Settings Screen
+
+✅ Settings Navigation
+
+✅ Theme Support
+
+✅ Storage Information
+
+✅ Version Information
+
+✅ Today Reset
+
+✅ Progress Reset
+
+✅ Export Backup
+
+✅ Import Backup
 
 ---
 
@@ -219,11 +238,20 @@ One Feature = One Sprint
 index.html
 
 css/
+
     style.css
+
+docs/
+
+    PROJECT_CONTEXT.md
 
 js/
 
     app.js
+
+    config.js
+
+    constants.js
 
     dashboard-ui.js
 
@@ -234,6 +262,8 @@ js/
     kanji-ui.js
 
     favorite-ui.js
+
+    settings-ui.js
 
     study-engine.js
 
@@ -279,7 +309,7 @@ Completed
 
 ✅ Mock Exam
 
-✅ Weakness Study
+✅ Weakness
 
 ✅ Review
 
@@ -289,6 +319,8 @@ Completed
 
 ✅ Report
 
+✅ Settings
+
 ✅ Dark Mode
 
 ✅ PWA
@@ -297,7 +329,7 @@ Completed
 
 # Planned Features
 
-## Foundation
+## Character
 
 - Hiragana
 - Katakana
@@ -327,24 +359,12 @@ Completed
 
 ---
 
-## Study
-
-- Grammar
-- Vocabulary
-- Kanji
-- Quiz
-- Mock Exam
-- Weakness
-- Review
-
----
-
 ## AI
 
 - AI Grammar
 - AI Conversation
-- AI Sentence Review
 - AI Explanation
+- AI Review
 
 ---
 
@@ -354,7 +374,7 @@ Dashboard
 
 ↓
 
-Today's Characters
+Today's Character
 
 ↓
 
@@ -378,107 +398,13 @@ Review
 
 ↓
 
-Daily Complete
-
----
-
-# Character System
-
-지원 예정
-
-Hiragana
-
-Katakana
-
-Dakuten
-
-Handakuten
-
-Youon
-
-Character Search
-
-Character Comparison
-
-Character Quiz
-
-Weak Character
-
-Character Progress
-
-Character Achievement
-
----
-
-# Quiz System
-
-Character Quiz
-
-Reading Quiz
-
-Grammar Quiz
-
-Vocabulary Quiz
-
-Kanji Quiz
-
-Weakness Quiz
-
-Mixed Quiz
-
-JLPT Quiz
-
-Mock Exam
-
----
-
-# Smart Learning
-
-AI처럼 사용자의 약점을 분석한다.
-
-예)
-
-"め"
-
-7회 오답
-
-↓
-
-약점 등록
-
-↓
-
-자동 반복 출제
-
-↓
-
-Master 될 때까지 반복
-
----
-
-# Dashboard
-
-오늘의 문자
-
-오늘의 문법
-
-오늘의 단어
-
-오늘의 한자
-
-오늘의 목표
-
-오늘의 진행률
-
-연속 학습
-
-최근 7일
-
-최근 30일
+Complete
 
 ---
 
 # Statistics
+
+Dashboard Progress
 
 Grammar Progress
 
@@ -500,124 +426,21 @@ Review Queue
 
 ---
 
-# Mobile Improvements
+# Mobile Improvements (Sprint 2)
 
-반드시 개선
+Target
 
-- Safe Area 대응
-- 긴 버튼 줄바꿈
-- 모바일 Grid
-- Progress Bar
-- 반응형 Layout
-- 작은 화면 최적화
+✅ Safe Area
 
----
+✅ Better Navigation
 
-# Settings (Sprint 1)
+✅ Responsive Grid
 
-Settings 화면
+✅ Responsive Button
 
-Dark Mode
+✅ Better Progress UI
 
-Storage Info
-
-Today Reset
-
-Progress Reset
-
-Export
-
-Import
-
-Version
-
----
-
-# Sprint Roadmap
-
-Sprint 1
-
-FEATURE-001
-
-Settings System
-
-Status
-
-READY
-
----
-
-Sprint 2
-
-FEATURE-002
-
-Mobile UI Upgrade
-
----
-
-Sprint 3
-
-FEATURE-003
-
-Character Learning
-
-(Hiragana / Katakana)
-
----
-
-Sprint 4
-
-FEATURE-004
-
-Character Quiz
-
----
-
-Sprint 5
-
-FEATURE-005
-
-Character Weakness Engine
-
----
-
-Sprint 6
-
-FEATURE-006
-
-Reading Practice
-
----
-
-Sprint 7
-
-FEATURE-007
-
-Data Backup / Restore
-
----
-
-Sprint 8
-
-FEATURE-008
-
-Dashboard Upgrade
-
----
-
-Sprint 9
-
-FEATURE-009
-
-Study Statistics
-
----
-
-Sprint 10
-
-FEATURE-010
-
-AI Learning Assistant
+✅ Small Screen Optimization
 
 ---
 
@@ -625,41 +448,36 @@ AI Learning Assistant
 
 현재 확인됨
 
-- 일부 보기 데이터 검토 필요
-- 모바일 UI 개선 필요
-- Settings 없음
-- Progress Reset 없음
-- Export / Import 없음
+- 일부 문제 데이터 검토 필요
+- Mobile Navigation 개선 예정
+- Safe Area 적용 예정
+- 버튼 크기 최적화 필요
 
 ---
 
 # Daily Workflow
 
-매일 작업 시작
-
-↓
-
 PROJECT_CONTEXT.md 확인
 
 ↓
 
-Sprint 확인
+Current Sprint 확인
 
 ↓
 
-Feature 구현
+Feature 개발
 
 ↓
 
-모바일 테스트
+Regression Test
 
 ↓
 
-버그 수정
+Mobile Test
 
 ↓
 
-PROJECT_CONTEXT.md 전체 업데이트
+PROJECT_CONTEXT.md 업데이트
 
 ↓
 
@@ -673,43 +491,55 @@ Push
 
 # Rules for ChatGPT
 
-항상 PROJECT_CONTEXT.md를 먼저 읽는다.
+항상 PROJECT_CONTEXT.md를 먼저 확인한다.
 
-현재 코드가 Source of Truth이다.
+Current Project Code를 Source of Truth로 사용한다.
 
-이미 구현된 기능은 다시 만들지 않는다.
+이미 구현된 기능은 다시 구현하지 않는다.
 
 기존 UI 스타일을 유지한다.
 
-모바일 우선으로 설계한다.
+Mobile First를 유지한다.
 
-Regression을 발생시키지 않는다.
+Regression Zero를 최우선으로 한다.
 
-불필요한 리팩토링을 하지 않는다.
+One Feature = One Sprint
 
-Feature 단위로 개발한다.
+One Step = One Commit
 
-완료 후에는 PROJECT_CONTEXT.md 전체를 다시 작성하여 최신 상태로 갱신한다.
+300줄 이하 파일은 전체 교체본 제공.
+
+500줄 이상 파일은
+
+- 수정 위치
+- 찾을 코드
+- 추가/교체 코드
+
+형태로 정확하게 안내한다.
+
+애매한 설명 없이 실제 적용 가능한 형태로 제공한다.
 
 ---
 
 # Next Sprint
 
-FEATURE-001
+Sprint 2
 
-Settings System
+FEATURE-002
+
+Mobile UI Upgrade
 
 목표
 
-✅ Settings 버튼
+✅ Safe Area 대응
 
-✅ Settings 화면
+✅ Mobile Navigation 개선
 
-✅ Today Reset
+✅ Responsive Layout
 
-✅ Progress Reset
+✅ Button UX 개선
 
-✅ Version
+✅ Small Screen Optimization
 
 Status
 
