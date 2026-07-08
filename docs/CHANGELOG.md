@@ -1,84 +1,40 @@
 # CHANGELOG
 
-Japanese Master Road
+## Version 3.1.1
 
----
+### Sprint 2
 
-# v3.1.0
+FEATURE-002 Mobile UI Upgrade
 
-Release Date
+### STEP 1
 
-2026-07-08
+- Improved Button UX
+- Improved touch usability
 
----
+### STEP 2
 
-## FEATURE-001
+- Responsive Navigation
+- Mobile navigation optimization
 
-Settings System
+### STEP 3
 
-Status
+- Responsive Grid
+- Improved dashboard layout
+- Improved card responsiveness
 
-COMPLETED
+### STEP 4
 
----
+- Mobile Safe Area support
+- iPhone / PWA compatibility
+- Header safe padding
+- Bottom safe padding
 
-### Added
+### Bug Fix
 
-- Settings Screen
-- Settings Navigation
-- Storage Information
-- Version Information
-- Today Reset
-- Progress Reset
-- Export Backup
-- Import Backup
+- Fixed Progress Reset not clearing Wrong Answers
+- Progress Reset now clears Wrong Note data
+- Dashboard wrong answer counter now resets correctly
 
----
+Regression
 
-### Improved
-
-- Dashboard Navigation
-- Quick Study Buttons
-- Theme Integration
-
----
-
-### Fixed
-
-- Dashboard Quick Button Navigation
-- showTab Reference Error
-
----
-
-### Regression
-
-None
-
-Regression Zero 유지
-
----
-
-# Previous Versions
-
-## v3.0.0
-
-Project Foundation
-
-### Added
-
-- Foundation Directories
-- config.js
-- constants.js
-- Dashboard
-- Grammar
-- Vocabulary
-- Kanji
-- Quiz
-- Mock Exam
-- Weakness
-- Review
-- Favorite
-- Achievement
-- Report
-- Dark Mode
-- PWA
+- Zero

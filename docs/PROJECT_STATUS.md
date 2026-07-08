@@ -1,67 +1,72 @@
-
-# PROJECT_STATUS.md
+# PROJECT STATUS
 
 Project
 
 Japanese Master Road
 
----
-
 Version
 
-3.0.0
-
----
+3.1.1
 
 Current Sprint
 
-Sprint 0
+Sprint 2
 
----
+Feature
 
-Current Feature
+FEATURE-002
 
-FEATURE-000
+Status
 
-Project Foundation
-
----
-
-Current Step
-
-STEP 4
-
-Settings UI
-
----
-
-Progress
-
-3 / 10 Steps
-
-30%
-
----
+IN PROGRESS
 
 Completed
 
-- Foundation Directories
-- Application Config
-- Application Constants
+✅ Foundation
 
----
+✅ Dashboard
 
-Next Task
+✅ Grammar
 
-Create Settings UI
+✅ Vocabulary
 
----
+✅ Kanji
+
+✅ Quiz
+
+✅ Mock Exam
+
+✅ Weakness
+
+✅ Review
+
+✅ Favorite
+
+✅ Achievement
+
+✅ Report
+
+✅ Settings
+
+✅ Theme
+
+✅ Export / Import
+
+Sprint 2
+
+✅ STEP 1 Button UX
+
+✅ STEP 2 Responsive Navigation
+
+✅ STEP 3 Responsive Grid
+
+✅ STEP 4 Mobile Safe Area
+
+⬜ STEP 5 Mobile Polish
 
 Regression
 
 Zero
-
----
 
 Build
 
