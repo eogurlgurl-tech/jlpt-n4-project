@@ -1,3 +1,85 @@
+# PROJECT_CONTEXT.md
+
+Project : Japanese Master Road
+
+Version : 3.0.0
+
+Status : Sprint 0 In Progress
+
+Development Method : Sprint
+
+Source of Truth
+
+- Current Project Code
+- PROJECT_CONTEXT.md
+
+---
+
+# Vision
+
+일본어를 처음 배우는 사람도
+
+히라가나부터 JLPT N1까지
+
+하나의 플랫폼에서 학습할 수 있도록 한다.
+
+GitHub Pages에서 동작하는
+
+무료 일본어 학습 플랫폼을 구축한다.
+
+---
+
+# Development Rules
+
+- 현재 프로젝트 코드를 Source of Truth로 사용한다.
+- Regression Zero.
+- One Feature = One Sprint
+- One Step = One Commit
+- Mobile First
+- 기존 기능을 깨뜨리지 않는다.
+- 필요한 기능만 추가한다.
+- 완료 후 문서를 업데이트한다.
+
+---
+
+# Current Sprint
+
+Sprint 0
+
+FEATURE-000
+
+Project Foundation
+
+Status
+
+IN PROGRESS
+
+---
+
+# Completed
+
+✅ Foundation Directories
+
+docs/
+
+assets/
+
+data/
+
+tests/
+
+✅ config.js
+
+✅ constants.js
+
+---
+
+# Next Feature
+
+FEATURE-001
+
+Settings Syst
+
 # Japanese Master Road
 
 ## PROJECT_CONTEXT.md
