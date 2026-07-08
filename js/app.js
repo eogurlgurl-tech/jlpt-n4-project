@@ -180,6 +180,12 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
       mockexamTab.style.display = "none";
     }
 
+    const settingsTab = document.getElementById("settingsTab");
+
+    if (settingsTab) {
+      settingsTab.style.display = "none";
+    }
+
     const tab = btn.dataset.tab;
 
     if (tab === "dashboard") {
@@ -271,6 +277,15 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
         if (typeof renderMockExam === "function") {
           renderMockExam();
         }
+      }
+    }
+    if (tab === "settings") {
+      const settingsTab = document.getElementById("settingsTab");
+
+      settingsTab.style.display = "block";
+
+      if (typeof renderSettings === "function") {
+        renderSettings();
       }
     }
   });
