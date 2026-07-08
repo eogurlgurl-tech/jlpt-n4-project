@@ -55,6 +55,14 @@ function resetAllProgress() {
   localStorage.removeItem(STREAK_KEY);
   localStorage.removeItem(QUIZ_STATS_KEY);
 
+  // 오답노트 초기화
+  if (typeof clearWrongAnswers === "function") {
+    clearWrongAnswers();
+  }
+
+  // 즐겨찾기 초기화
+  localStorage.removeItem(FAVORITE_KEY);
+
   progress = {
     ...defaultData,
   };

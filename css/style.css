@@ -274,7 +274,9 @@ main {
 
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
   gap: 12px;
 }
 
@@ -677,7 +679,7 @@ body {
 .quick-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
   gap: 12px;
 }
@@ -854,5 +856,36 @@ body {
     min-height: 48px;
 
     font-size: 14px;
+  }
+}
+
+/* =====================================================
+   FEATURE-002 STEP-3
+   Responsive Grid Upgrade
+===================================================== */
+
+@media (max-width: 480px) {
+  .quick-grid,
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card {
+    margin-bottom: 12px;
+  }
+
+  .progress-item {
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .card-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .card-nav button {
+    min-height: 48px;
   }
 }
